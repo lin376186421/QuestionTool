@@ -197,6 +197,7 @@
     BOOL _oldPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_jingpinOldFullPathLabel.stringValue];
     BOOL _kjzPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_kjzFullPathLabel.stringValue];
     NSUInteger certType = [self certType];//驾照类型
+
 //    _course//科目
 //    _isAuto//
 //    _isCL_DB//

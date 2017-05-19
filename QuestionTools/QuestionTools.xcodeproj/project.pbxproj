@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0E7B3B1ECEC29800642B8B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0E7B3A1ECEC29800642B8B /* libsqlite3.tbd */; };
+		3E0E7B3D1ECEC63B00642B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */; };
 		3EDAC16B1ECD985B0087CB6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */; };
 		3EDAC16E1ECD985B0087CB6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC16D1ECD985B0087CB6B /* main.m */; };
 		3EDAC1711ECD985B0087CB6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1701ECD985B0087CB6B /* ViewController.m */; };
 		3EDAC1731ECD985B0087CB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDAC1721ECD985B0087CB6B /* Assets.xcassets */; };
-		3EDAC1761ECD985B0087CB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDAC1741ECD985B0087CB6B /* Main.storyboard */; };
 		3EDAC1811ECD985B0087CB6B /* QuestionToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1801ECD985B0087CB6B /* QuestionToolsUITests.m */; };
+		3EDAC18D1ECEA1CB0087CB6B /* QuestionsEncryptionControll.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC18C1ECEA1CB0087CB6B /* QuestionsEncryptionControll.m */; };
+		3EDAC1A81ECEA21F0087CB6B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EDAC18F1ECEA21F0087CB6B /* LICENSE.txt */; };
+		3EDAC1A91ECEA21F0087CB6B /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1901ECEA21F0087CB6B /* README.markdown */; };
+		3EDAC1AA1ECEA21F0087CB6B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1941ECEA21F0087CB6B /* FMDatabase.m */; };
+		3EDAC1AB1ECEA21F0087CB6B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1961ECEA21F0087CB6B /* FMDatabaseAdditions.m */; };
+		3EDAC1AC1ECEA21F0087CB6B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1981ECEA21F0087CB6B /* FMDatabasePool.m */; };
+		3EDAC1AD1ECEA21F0087CB6B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC19A1ECEA21F0087CB6B /* FMDatabaseQueue.m */; };
+		3EDAC1AE1ECEA21F0087CB6B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC19D1ECEA21F0087CB6B /* FMResultSet.m */; };
+		3EDAC1AF1ECEA21F0087CB6B /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC19F1ECEA21F0087CB6B /* aes.c */; };
+		3EDAC1B01ECEA21F0087CB6B /* fuck_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1A21ECEA21F0087CB6B /* fuck_wrapper.m */; };
+		3EDAC1B11ECEA21F0087CB6B /* fuckme.c in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1A31ECEA21F0087CB6B /* fuckme.c */; };
+		3EDAC1B21ECEA21F0087CB6B /* hexstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1A51ECEA21F0087CB6B /* hexstring.c */; };
+		3EDAC1B31ECEA21F0087CB6B /* question.db in Resources */ = {isa = PBXBuildFile; fileRef = 3EDAC1A71ECEA21F0087CB6B /* question.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E0E7B3A1ECEC29800642B8B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3EDAC1661ECD985B0087CB6B /* QuestionTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDAC1691ECD985B0087CB6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,11 +49,34 @@
 		3EDAC16F1ECD985B0087CB6B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3EDAC1701ECD985B0087CB6B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3EDAC1721ECD985B0087CB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3EDAC1751ECD985B0087CB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EDAC1771ECD985B0087CB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDAC17C1ECD985B0087CB6B /* QuestionToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDAC1801ECD985B0087CB6B /* QuestionToolsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionToolsUITests.m; sourceTree = "<group>"; };
 		3EDAC1821ECD985B0087CB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EDAC18B1ECEA1CB0087CB6B /* QuestionsEncryptionControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsEncryptionControll.h; sourceTree = "<group>"; };
+		3EDAC18C1ECEA1CB0087CB6B /* QuestionsEncryptionControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsEncryptionControll.m; sourceTree = "<group>"; };
+		3EDAC18F1ECEA21F0087CB6B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		3EDAC1901ECEA21F0087CB6B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		3EDAC1931ECEA21F0087CB6B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		3EDAC1941ECEA21F0087CB6B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		3EDAC1951ECEA21F0087CB6B /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		3EDAC1961ECEA21F0087CB6B /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		3EDAC1971ECEA21F0087CB6B /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		3EDAC1981ECEA21F0087CB6B /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		3EDAC1991ECEA21F0087CB6B /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		3EDAC19A1ECEA21F0087CB6B /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		3EDAC19B1ECEA21F0087CB6B /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		3EDAC19C1ECEA21F0087CB6B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		3EDAC19D1ECEA21F0087CB6B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		3EDAC19F1ECEA21F0087CB6B /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes.c; sourceTree = "<group>"; };
+		3EDAC1A01ECEA21F0087CB6B /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		3EDAC1A11ECEA21F0087CB6B /* fuck_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fuck_wrapper.h; sourceTree = "<group>"; };
+		3EDAC1A21ECEA21F0087CB6B /* fuck_wrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fuck_wrapper.m; sourceTree = "<group>"; };
+		3EDAC1A31ECEA21F0087CB6B /* fuckme.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fuckme.c; sourceTree = "<group>"; };
+		3EDAC1A41ECEA21F0087CB6B /* fuckme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fuckme.h; sourceTree = "<group>"; };
+		3EDAC1A51ECEA21F0087CB6B /* hexstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hexstring.c; sourceTree = "<group>"; };
+		3EDAC1A61ECEA21F0087CB6B /* hexstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hexstring.h; sourceTree = "<group>"; };
+		3EDAC1A71ECEA21F0087CB6B /* question.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = question.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E0E7B3B1ECEC29800642B8B /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +98,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E0E7B391ECEC29800642B8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E7B3A1ECEC29800642B8B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3EDAC15D1ECD985B0087CB6B = {
 			isa = PBXGroup;
 			children = (
 				3EDAC1681ECD985B0087CB6B /* QuestionTools */,
 				3EDAC17F1ECD985B0087CB6B /* QuestionToolsUITests */,
 				3EDAC1671ECD985B0087CB6B /* Products */,
+				3E0E7B391ECEC29800642B8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +128,16 @@
 		3EDAC1681ECD985B0087CB6B /* QuestionTools */ = {
 			isa = PBXGroup;
 			children = (
+				3EDAC18E1ECEA21F0087CB6B /* FMDB */,
+				3EDAC19E1ECEA21F0087CB6B /* FUCK */,
 				3EDAC1691ECD985B0087CB6B /* AppDelegate.h */,
 				3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */,
 				3EDAC16F1ECD985B0087CB6B /* ViewController.h */,
 				3EDAC1701ECD985B0087CB6B /* ViewController.m */,
+				3EDAC18B1ECEA1CB0087CB6B /* QuestionsEncryptionControll.h */,
+				3EDAC18C1ECEA1CB0087CB6B /* QuestionsEncryptionControll.m */,
+				3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */,
 				3EDAC1721ECD985B0087CB6B /* Assets.xcassets */,
-				3EDAC1741ECD985B0087CB6B /* Main.storyboard */,
 				3EDAC1771ECD985B0087CB6B /* Info.plist */,
 				3EDAC16C1ECD985B0087CB6B /* Supporting Files */,
 			);
@@ -106,6 +159,58 @@
 				3EDAC1821ECD985B0087CB6B /* Info.plist */,
 			);
 			path = QuestionToolsUITests;
+			sourceTree = "<group>";
+		};
+		3EDAC18E1ECEA21F0087CB6B /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				3EDAC18F1ECEA21F0087CB6B /* LICENSE.txt */,
+				3EDAC1901ECEA21F0087CB6B /* README.markdown */,
+				3EDAC1911ECEA21F0087CB6B /* src */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		3EDAC1911ECEA21F0087CB6B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3EDAC1921ECEA21F0087CB6B /* fmdb */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3EDAC1921ECEA21F0087CB6B /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				3EDAC1931ECEA21F0087CB6B /* FMDatabase.h */,
+				3EDAC1941ECEA21F0087CB6B /* FMDatabase.m */,
+				3EDAC1951ECEA21F0087CB6B /* FMDatabaseAdditions.h */,
+				3EDAC1961ECEA21F0087CB6B /* FMDatabaseAdditions.m */,
+				3EDAC1971ECEA21F0087CB6B /* FMDatabasePool.h */,
+				3EDAC1981ECEA21F0087CB6B /* FMDatabasePool.m */,
+				3EDAC1991ECEA21F0087CB6B /* FMDatabaseQueue.h */,
+				3EDAC19A1ECEA21F0087CB6B /* FMDatabaseQueue.m */,
+				3EDAC19B1ECEA21F0087CB6B /* FMDB.h */,
+				3EDAC19C1ECEA21F0087CB6B /* FMResultSet.h */,
+				3EDAC19D1ECEA21F0087CB6B /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		3EDAC19E1ECEA21F0087CB6B /* FUCK */ = {
+			isa = PBXGroup;
+			children = (
+				3EDAC19F1ECEA21F0087CB6B /* aes.c */,
+				3EDAC1A01ECEA21F0087CB6B /* aes.h */,
+				3EDAC1A11ECEA21F0087CB6B /* fuck_wrapper.h */,
+				3EDAC1A21ECEA21F0087CB6B /* fuck_wrapper.m */,
+				3EDAC1A31ECEA21F0087CB6B /* fuckme.c */,
+				3EDAC1A41ECEA21F0087CB6B /* fuckme.h */,
+				3EDAC1A51ECEA21F0087CB6B /* hexstring.c */,
+				3EDAC1A61ECEA21F0087CB6B /* hexstring.h */,
+				3EDAC1A71ECEA21F0087CB6B /* question.db */,
+			);
+			path = FUCK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EDAC1A81ECEA21F0087CB6B /* LICENSE.txt in Resources */,
 				3EDAC1731ECD985B0087CB6B /* Assets.xcassets in Resources */,
-				3EDAC1761ECD985B0087CB6B /* Main.storyboard in Resources */,
+				3EDAC1B31ECEA21F0087CB6B /* question.db in Resources */,
+				3E0E7B3D1ECEC63B00642B8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,9 +316,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EDAC1AF1ECEA21F0087CB6B /* aes.c in Sources */,
 				3EDAC1711ECD985B0087CB6B /* ViewController.m in Sources */,
+				3EDAC1B11ECEA21F0087CB6B /* fuckme.c in Sources */,
+				3EDAC1B01ECEA21F0087CB6B /* fuck_wrapper.m in Sources */,
+				3EDAC1A91ECEA21F0087CB6B /* README.markdown in Sources */,
 				3EDAC16E1ECD985B0087CB6B /* main.m in Sources */,
+				3EDAC1AA1ECEA21F0087CB6B /* FMDatabase.m in Sources */,
+				3EDAC1AE1ECEA21F0087CB6B /* FMResultSet.m in Sources */,
 				3EDAC16B1ECD985B0087CB6B /* AppDelegate.m in Sources */,
+				3EDAC1AC1ECEA21F0087CB6B /* FMDatabasePool.m in Sources */,
+				3EDAC1AB1ECEA21F0087CB6B /* FMDatabaseAdditions.m in Sources */,
+				3EDAC18D1ECEA1CB0087CB6B /* QuestionsEncryptionControll.m in Sources */,
+				3EDAC1B21ECEA21F0087CB6B /* hexstring.c in Sources */,
+				3EDAC1AD1ECEA21F0087CB6B /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,17 +350,6 @@
 			targetProxy = 3EDAC17D1ECD985B0087CB6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3EDAC1741ECD985B0087CB6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3EDAC1751ECD985B0087CB6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3EDAC1831ECD985B0087CB6B /* Debug */ = {
@@ -399,6 +506,7 @@
 				3EDAC1871ECD985B0087CB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EDAC1881ECD985B0087CB6B /* Build configuration list for PBXNativeTarget "QuestionToolsUITests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +515,7 @@
 				3EDAC18A1ECD985B0087CB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
