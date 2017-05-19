@@ -1,5 +1,5 @@
 //
-//  QuestionsEncryptionControll.h
+//  QuestionsEncryptionViewController.h
 //  QuestionTools
 //
 //  Created by 林 on 2017/5/19.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface QuestionsEncryptionControll : NSViewController
+@interface QuestionsEncryptionViewController : NSWindowController
 
 @property (strong) IBOutlet NSProgressIndicator *barProgress;
 
@@ -21,5 +21,6 @@
 
 @property (strong) IBOutlet NSButton *makeBtn;
 @property (assign) BOOL isWork;
+
 
 @end

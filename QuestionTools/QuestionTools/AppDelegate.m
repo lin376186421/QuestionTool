@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "QuestionsEncryptionControll.h"
-
+#import "QuestionsEncryptionViewController.h"
 @interface AppDelegate ()
 {
     NSStoryboard *_storyboard;
+    NSWindowController *_mainWindowController;
 }
 
 @end
@@ -20,7 +20,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
     _storyboard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    NSWindowController *windowController = [_storyboard instantiateControllerWithIdentifier:@"MainWindowController"];
+    _mainWindowController = windowController;
+
 }
 
 
@@ -30,15 +34,18 @@
 
 
 - (IBAction)showDB_DEAction:(id)sender {
-   
-    QuestionsEncryptionControll *vc = [_storyboard instantiateControllerWithIdentifier:@"QuestionsEncryptionControll"];
-//    NSApp.keyWindow
-    NSWindowController *windowVC = [[NSWindowController alloc] initWithWindow:[[NSWindow alloc] init]];
-    [windowVC setContentViewController:vc];
-    [windowVC showWindow:nil];
+    //底部window不能操作
+//    QuestionsEncryptionViewController *windowVC = [[QuestionsEncryptionViewController alloc] initWithWindowNibName:@"QuestionsEncryptionViewController"];
+////    [windowVC showWindow:nil];
+//    [NSApp runModalForWindow:windowVC.window];
+    //两个window都能操作
+    QuestionsEncryptionViewController *windowVC = [[QuestionsEncryptionViewController alloc] initWithWindowNibName:@"QuestionsEncryptionViewController"];
+    [_mainWindowController.window addChildWindow:windowVC.window ordered:NSWindowAbove];
+    
 }
 
 - (IBAction)showLogAction:(id)sender {
+
 }
 
 @end

@@ -433,11 +433,11 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController storyboardIdentifier="MainWindowController" id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="题库工具" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="580" height="390"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
                     </window>
                     <connections>
@@ -446,18 +446,18 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="246"/>
+            <point key="canvasLocation" x="99" y="207"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="P8z-Rx-ZLY">
-                        <rect key="frame" x="0.0" y="0.0" width="579" height="391"/>
+                        <rect key="frame" x="0.0" y="0.0" width="580" height="390"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-fU-HZn">
-                                <rect key="frame" x="18" y="139" width="69" height="17"/>
+                                <rect key="frame" x="18" y="138" width="69" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="考驾照题库" id="vUz-0N-eHA">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -466,7 +466,7 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="2AE-NG-vDq">
-                                <rect key="frame" x="101" y="344" width="74" height="18"/>
+                                <rect key="frame" x="101" y="343" width="74" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="radio" title="驾考宝典" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2Qo-fD-YaR">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -477,7 +477,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="vMd-Sm-xSQ">
-                                <rect key="frame" x="246" y="343" width="87" height="18"/>
+                                <rect key="frame" x="246" y="342" width="87" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="radio" title="驾校一点通" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="t7S-7S-AQ5">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -488,7 +488,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="Tuy-lN-xzF">
-                                <rect key="frame" x="405" y="343" width="74" height="18"/>
+                                <rect key="frame" x="405" y="342" width="74" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="radio" title="元贝驾考" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="A8A-V3-5cj">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -499,7 +499,7 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bu6-6C-SRV">
-                                <rect key="frame" x="102" y="263" width="165" height="49"/>
+                                <rect key="frame" x="102" y="262" width="165" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="拖入新的竞品题库路径" drawsBackground="YES" id="OeU-Bf-8r3">
                                     <font key="font" metaFont="system" size="15"/>
@@ -508,7 +508,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bd-fA-U4S">
-                                <rect key="frame" x="18" y="274" width="64" height="28"/>
+                                <rect key="frame" x="18" y="273" width="64" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="竞品题库" id="TRu-bG-ynr">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -517,7 +517,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfq-f1-ld0">
-                                <rect key="frame" x="18" y="344" width="56" height="17"/>
+                                <rect key="frame" x="18" y="343" width="56" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="竞品选择" id="yID-uw-v4U">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -526,7 +526,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEA-p9-8uk">
-                                <rect key="frame" x="276" y="179" width="149" height="76"/>
+                                <rect key="frame" x="276" y="178" width="149" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="justified" title="路径" placeholderString="路径" id="O5f-Xd-IOB">
                                     <font key="font" metaFont="smallSystem"/>
@@ -535,7 +535,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lpa-bs-3om">
-                                <rect key="frame" x="100" y="179" width="149" height="76"/>
+                                <rect key="frame" x="100" y="178" width="149" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="justified" title="路径" placeholderString="路径" id="VwG-Op-XSM">
                                     <font key="font" metaFont="smallSystem"/>
@@ -544,7 +544,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-Up-73J">
-                                <rect key="frame" x="100" y="61" width="345" height="55"/>
+                                <rect key="frame" x="100" y="60" width="345" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="justified" title="路径" placeholderString="路径" id="RHQ-D8-fFh">
                                     <font key="font" metaFont="smallSystem"/>
@@ -553,7 +553,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jp5-av-Bvg">
-                                <rect key="frame" x="102" y="124" width="341" height="47"/>
+                                <rect key="frame" x="102" y="123" width="341" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="拖入考驾照的题库路径" drawsBackground="YES" id="0sA-IG-EEn">
                                     <font key="font" metaFont="system" size="15"/>
@@ -562,7 +562,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="UV9-9C-3jx">
-                                <rect key="frame" x="96" y="13" width="123" height="32"/>
+                                <rect key="frame" x="96" y="12" width="123" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="比对自身" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3qY-5b-Ea8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -573,7 +573,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="tDH-NF-yPZ">
-                                <rect key="frame" x="457" y="154" width="49" height="18"/>
+                                <rect key="frame" x="457" y="153" width="49" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="radio" title="科一" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="GhA-WX-4of">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -584,7 +584,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-e8-kLa">
-                                <rect key="frame" x="457" y="123" width="49" height="18"/>
+                                <rect key="frame" x="457" y="122" width="49" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="radio" title="科四" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="JEU-UZ-jfM">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -595,7 +595,7 @@
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khh-VS-ZDu">
-                                <rect key="frame" x="456" y="84" width="76" height="26"/>
+                                <rect key="frame" x="456" y="83" width="76" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="wye-t2-WCv" id="MAm-0G-DX3">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -610,7 +610,7 @@
                                 </popUpButtonCell>
                             </popUpButton>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XvV-pf-OVg">
-                                <rect key="frame" x="278" y="263" width="165" height="49"/>
+                                <rect key="frame" x="278" y="262" width="165" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="拖入旧的竞品题库路径" drawsBackground="YES" id="GBL-nJ-paF">
                                     <font key="font" metaFont="system" size="15"/>
@@ -619,7 +619,7 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXV-vO-UeY">
-                                <rect key="frame" x="456" y="297" width="96" height="17"/>
+                                <rect key="frame" x="456" y="296" width="96" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="自动识别" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gnD-TD-T2W">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -630,7 +630,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="GRF-KS-8tM">
-                                <rect key="frame" x="344" y="13" width="105" height="32"/>
+                                <rect key="frame" x="344" y="12" width="105" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="比对考驾照" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2I6-mq-0a1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -641,7 +641,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-Iz-IXL">
-                                <rect key="frame" x="456" y="261" width="103" height="18"/>
+                                <rect key="frame" x="456" y="260" width="103" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="是否CL_DB" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="4En-wa-shx">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -652,7 +652,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-sd-L8q">
-                                <rect key="frame" x="493" y="22" width="74" height="18"/>
+                                <rect key="frame" x="493" y="21" width="74" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="生成文件" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="iPl-5f-8lU">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -686,12 +686,12 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="704"/>
+            <point key="canvasLocation" x="107" y="676"/>
         </scene>
         <!--Questions Encryption Controll-->
         <scene sceneID="lP5-Kh-3Kb">
             <objects>
-                <viewController id="Lcr-FE-Xbm" customClass="QuestionsEncryptionControll" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionsEncryptionControll" id="Lcr-FE-Xbm" customClass="QuestionsEncryptionControll" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="TzG-ZY-gKv">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="100"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -773,7 +773,7 @@
                 </viewController>
                 <customObject id="uHG-ni-UoG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="585"/>
+            <point key="canvasLocation" x="22" y="1047"/>
         </scene>
     </scenes>
 </document>

@@ -1,32 +1,37 @@
 //
-//  QuestionsEncryptionControll.m
+//  QuestionsEncryptionViewController.m
 //  QuestionTools
 //
 //  Created by 林 on 2017/5/19.
 //  Copyright © 2017年 林. All rights reserved.
 //
 
-#import "QuestionsEncryptionControll.h"
+#import "QuestionsEncryptionViewController.h"
 #import "fuck_wrapper.h"
 #import "FMDB.h"
 #import "FMDatabaseAdditions.h"
 
-@interface QuestionsEncryptionControll ()
+@interface QuestionsEncryptionViewController ()
 
 @end
 
-@implementation QuestionsEncryptionControll
+@implementation QuestionsEncryptionViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (void)windowDidLoad {
+    [super windowDidLoad];
     _eBtn.state = 0;
     _dBtn.state = 1;
     
     _barProgress.hidden = YES;
     _resultLb.hidden = YES;
     _isWork = NO;
-    // Do any additional setup after loading the view.
+    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+}
+
+
+- (void) windowWillClose:(NSNotification *)notification
+{
+    [NSApp stopModalWithCode:0];
 }
 
 - (void)encryptTxt {
@@ -180,11 +185,11 @@
 }
 
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-    
-    // Update the view, if already loaded.
-}
+//- (void)setRepresentedObject:(id)representedObject {
+//    [super setRepresentedObject:representedObject];
+//    
+//    // Update the view, if already loaded.
+//}
 
 - (IBAction)eAction:(id)sender {
     _eBtn.state = 1;
