@@ -51,9 +51,9 @@
     [_outLineView reloadData];
     [_outLineView layoutSubtreeIfNeeded];
 //  其实 _outLineView == _scrollView.documentView
-    if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
-        [_scrollView scrollPoint:CGPointMake(0, _scrollView.documentView.frame.size.height-_scrollView.frame.size.height)];
-    }
+//    if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
+//        [_scrollView scrollPoint:CGPointMake(0, _scrollView.documentView.frame.size.height-_scrollView.frame.size.height)];
+//    }
     NSLog(@"%@",NSStringFromSize(_scrollView.documentView.frame.size));
 }
 
@@ -110,11 +110,12 @@
 #pragma mark NSOutline Drag
 - (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems
 {
-//    [DraggingPasteboardHelper writePasteboardItems:draggedItems forType:strIdentifierLessonSeries];
+    
 }
 - (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation
 {
 }
+
 - (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item
 {
 //    if ([item isKindOfClass:[LessonSeries class]])
@@ -139,37 +140,11 @@
         return NSDragOperationNone;
     }
 }
+
 - (BOOL)outlineView:(NSOutlineView *)outlineView acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(NSInteger)index
 {
     if (index >= 0)
     {
-        //        index -= 1;
-        //        if (index < 0)
-        //        {
-        //            index = 0;
-        //        }
-        //        NSArray *arr = [DraggingPasteboardHelper readPasteboardItems:info forType:strIdentifierLessonSeries];
-        //
-        //        NSMutableIndexSet *dragIndexSet = [[NSMutableIndexSet alloc] init];
-        //
-        //        for (id data in arr)
-        //        {
-        //            if ([data isKindOfClass:[LessonSeries class]])
-        //            {
-        //                NSInteger dragIndex = [_curLessonSet indexByItem:data];
-        //                if (dragIndex >= 0)
-        //                {
-        //                    [dragIndexSet addIndex:dragIndex];
-        //                }
-        //            }
-        //        }
-        //
-        //        if ([dragIndexSet count] > 0)
-        //        {
-        //            [_curLessonSet swapChildren:dragIndexSet withDestPos:index];
-        //            _arrLessonSeries = [_curLessonSet getChildren];
-        //            [lessonSeriesOutlineView reloadData];
-        //        }
         return YES;
     }
     
