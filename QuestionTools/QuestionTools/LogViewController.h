@@ -10,4 +10,7 @@
 
 @interface LogViewController : NSWindowController
 
+- (void)reloadData;
+- (void)addLog;
+
 @end

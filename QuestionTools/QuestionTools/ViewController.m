@@ -194,10 +194,16 @@
 //}
 
 - (IBAction)compareAction:(NSView *)sender {
+    
+    [App_Delegate addLog:sender.tag == 1 ? @"2017-05-20 14:43:21 sdkdvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbv" : @"2017-05-20 14:43:21 sdkdvfewjvgnk"];
+    return;
+    
+    
     BOOL _newPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_jingpinNewFullPathLabel.stringValue];
     BOOL _oldPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_jingpinOldFullPathLabel.stringValue];
     BOOL _kjzPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_kjzFullPathLabel.stringValue];
     NSUInteger certType = [self certType];//驾照类型
+    
     
 //    NSWindow *window = self.view.window;
 //    [window setFrame:CGRectMake(0, 0, 580, 400) display:YES];

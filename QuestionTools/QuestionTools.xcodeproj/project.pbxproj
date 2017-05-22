@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E0E7B3B1ECEC29800642B8B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0E7B3A1ECEC29800642B8B /* libsqlite3.tbd */; };
 		3E0E7B3D1ECEC63B00642B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */; };
+		3E17F6B81ED2832800987434 /* LogShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E17F6B61ED2832800987434 /* LogShowViewController.m */; };
+		3E17F6B91ED2832800987434 /* LogShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E17F6B71ED2832800987434 /* LogShowViewController.xib */; };
+		3E73EE9B1ED2B9D900E01A96 /* NSLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E73EE991ED2B9D900E01A96 /* NSLogCell.m */; };
+		3E73EE9C1ED2B9D900E01A96 /* NSLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E73EE9A1ED2B9D900E01A96 /* NSLogCell.xib */; };
 		3EC55EE81ECEC91100C9A5AF /* QuestionsEncryptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55EE61ECEC91100C9A5AF /* QuestionsEncryptionViewController.m */; };
 		3EC55EE91ECEC91100C9A5AF /* QuestionsEncryptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC55EE71ECEC91100C9A5AF /* QuestionsEncryptionViewController.xib */; };
 		3EC55EF01ECED0CA00C9A5AF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC55EEF1ECED0CA00C9A5AF /* AppKit.framework */; };
@@ -47,6 +51,13 @@
 /* Begin PBXFileReference section */
 		3E0E7B3A1ECEC29800642B8B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3E17F6B51ED2832800987434 /* LogShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogShowViewController.h; sourceTree = "<group>"; };
+		3E17F6B61ED2832800987434 /* LogShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogShowViewController.m; sourceTree = "<group>"; };
+		3E17F6B71ED2832800987434 /* LogShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogShowViewController.xib; sourceTree = "<group>"; };
+		3E73EE981ED2B9D900E01A96 /* NSLogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogCell.h; sourceTree = "<group>"; };
+		3E73EE991ED2B9D900E01A96 /* NSLogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogCell.m; sourceTree = "<group>"; };
+		3E73EE9A1ED2B9D900E01A96 /* NSLogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLogCell.xib; sourceTree = "<group>"; };
+		3E73EE9D1ED2BC3000E01A96 /* QuestionTools.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTools.pch; sourceTree = "<group>"; };
 		3EC55EE51ECEC91100C9A5AF /* QuestionsEncryptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsEncryptionViewController.h; sourceTree = "<group>"; };
 		3EC55EE61ECEC91100C9A5AF /* QuestionsEncryptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsEncryptionViewController.m; sourceTree = "<group>"; };
 		3EC55EE71ECEC91100C9A5AF /* QuestionsEncryptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsEncryptionViewController.xib; sourceTree = "<group>"; };
@@ -148,9 +159,15 @@
 				3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */,
 				3EC55EF11ECEE09800C9A5AF /* CommentWindow.h */,
 				3EC55EF21ECEE09800C9A5AF /* CommentWindow.m */,
+				3E17F6B51ED2832800987434 /* LogShowViewController.h */,
+				3E17F6B61ED2832800987434 /* LogShowViewController.m */,
+				3E17F6B71ED2832800987434 /* LogShowViewController.xib */,
 				3EC55EF41ECEEB9C00C9A5AF /* LogViewController.h */,
 				3EC55EF51ECEEB9C00C9A5AF /* LogViewController.m */,
 				3EC55EF61ECEEB9C00C9A5AF /* LogViewController.xib */,
+				3E73EE981ED2B9D900E01A96 /* NSLogCell.h */,
+				3E73EE991ED2B9D900E01A96 /* NSLogCell.m */,
+				3E73EE9A1ED2B9D900E01A96 /* NSLogCell.xib */,
 				3EDAC16F1ECD985B0087CB6B /* ViewController.h */,
 				3EDAC1701ECD985B0087CB6B /* ViewController.m */,
 				3EC55EE51ECEC91100C9A5AF /* QuestionsEncryptionViewController.h */,
@@ -168,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				3EDAC16D1ECD985B0087CB6B /* main.m */,
+				3E73EE9D1ED2BC3000E01A96 /* QuestionTools.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -316,10 +334,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EDAC1A81ECEA21F0087CB6B /* LICENSE.txt in Resources */,
+				3E73EE9C1ED2B9D900E01A96 /* NSLogCell.xib in Resources */,
 				3EDAC1731ECD985B0087CB6B /* Assets.xcassets in Resources */,
 				3EDAC1B31ECEA21F0087CB6B /* question.db in Resources */,
 				3EC55EF81ECEEB9C00C9A5AF /* LogViewController.xib in Resources */,
 				3EC55EE91ECEC91100C9A5AF /* QuestionsEncryptionViewController.xib in Resources */,
+				3E17F6B91ED2832800987434 /* LogShowViewController.xib in Resources */,
 				3E0E7B3D1ECEC63B00642B8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E17F6B81ED2832800987434 /* LogShowViewController.m in Sources */,
 				3EDAC1AF1ECEA21F0087CB6B /* aes.c in Sources */,
 				3EDAC1711ECD985B0087CB6B /* ViewController.m in Sources */,
 				3EDAC1B11ECEA21F0087CB6B /* fuckme.c in Sources */,
@@ -354,6 +375,7 @@
 				3EC55EE81ECEC91100C9A5AF /* QuestionsEncryptionViewController.m in Sources */,
 				3EDAC1B21ECEA21F0087CB6B /* hexstring.c in Sources */,
 				3EDAC1AD1ECEA21F0087CB6B /* FMDatabaseQueue.m in Sources */,
+				3E73EE9B1ED2B9D900E01A96 /* NSLogCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = QuestionTools/QuestionTools.pch;
 				INFOPLIST_FILE = QuestionTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -481,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = QuestionTools/QuestionTools.pch;
 				INFOPLIST_FILE = QuestionTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
