@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "QuestionsEncryptionViewController.h"
 #import "LogViewController.h"
-#import "LogShowViewController.h"
 
 @interface AppDelegate ()
 {
@@ -51,7 +50,6 @@
         [_logWindowController addLog];
     }
 }
-
 
 - (IBAction)showDB_DEAction:(id)sender {
     //底部window不能操作
