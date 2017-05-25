@@ -17,8 +17,17 @@
 
 @implementation QuestionsEncryptionViewController
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [App_Delegate setQuestionsEncryptionWindowController:nil];
+}
+
 - (void)windowDidLoad {
     [super windowDidLoad];
+    
+    [App_Delegate setQuestionsEncryptionWindowController:self];
+    
     _eBtn.state = 0;
     _dBtn.state = 1;
     
@@ -29,8 +38,10 @@
 }
 
 
-- (void) windowWillClose:(NSNotification *)notification
+- (void)windowWillClose:(NSNotification *)notification
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [App_Delegate setQuestionsEncryptionWindowController:nil];
     [NSApp stopModalWithCode:0];
 }
 

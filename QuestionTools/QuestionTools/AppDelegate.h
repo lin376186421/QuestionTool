@@ -20,7 +20,7 @@
 @property (nonatomic, strong) NSMutableArray<NSString *> *logArr;
 -(void)addLog:(NSString *)log;
 - (void)setLogWindowController:(NSWindowController *)windowVC;
-
+- (void)setQuestionsEncryptionWindowController:(NSWindowController *)windowVC;
 - (void)addStrToPasteboard:(NSString *)str;
 
 @end

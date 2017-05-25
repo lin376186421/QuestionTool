@@ -25,18 +25,22 @@
 
 - (void)dealloc
 {
+    [App_Delegate setLogWindowController:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     _outLineView = nil;
+}
+
+- (void)windowWillClose:(NSNotification *)notification
+{
     [App_Delegate setLogWindowController:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    _outLineView = nil;
+    [NSApp stopModalWithCode:0];
 }
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    
     [App_Delegate setLogWindowController:self];
-    //todo fuck
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logAdd:) name:APP_LOG_ADD_EVENT object:nil];
-//    NSLog(@"%@",App_Delegate.logArr);
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectOutView:) name:APP_EVENT_LOG_OUTLINEVIEW_MOUSEDONW object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popAction1:) name:APP_EVENT_POP_ACTION_1 object:nil];

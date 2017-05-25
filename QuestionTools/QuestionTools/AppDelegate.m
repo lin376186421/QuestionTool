@@ -9,12 +9,14 @@
 #import "AppDelegate.h"
 #import "QuestionsEncryptionViewController.h"
 #import "LogViewController.h"
-
+#import "QuestionsEncryptionViewController.h"
 @interface AppDelegate ()
 {
     NSStoryboard *_storyboard;
     NSWindowController *_mainWindowController;
     LogViewController *_logWindowController;
+    QuestionsEncryptionViewController *_QuestionsEncryptionWindowController;
+    
 }
 
 @end
@@ -38,6 +40,11 @@
     _logWindowController = (id)windowVC;
 }
 
+- (void)setQuestionsEncryptionWindowController:(NSWindowController *)windowVC
+{
+    _QuestionsEncryptionWindowController = (id)windowVC;
+}
+
 - (void)addLog:(NSString *)log
 {
     if (_logArr == nil) {
@@ -45,25 +52,29 @@
     }
     
     [_logArr addObject:log];
-//    [[NSNotificationCenter defaultCenter] postNotificationName:APP_LOG_ADD_EVENT object:nil userInfo:nil];
     if (_logWindowController) {
         [_logWindowController addLog];
     }
 }
 
 - (IBAction)showDB_DEAction:(id)sender {
-    //底部window不能操作
-//    QuestionsEncryptionViewController *windowVC = [[QuestionsEncryptionViewController alloc] initWithWindowNibName:@"QuestionsEncryptionViewController"];
-////    [windowVC showWindow:nil];
-//    [NSApp runModalForWindow:windowVC.window];
-    //两个window都能操作
+    
+    if (_QuestionsEncryptionWindowController) {
+        return;
+    }
+    
     QuestionsEncryptionViewController *windowVC = [[QuestionsEncryptionViewController alloc] initWithWindowNibName:@"QuestionsEncryptionViewController"];
     [_mainWindowController.window addChildWindow:windowVC.window ordered:NSWindowAbove];
-
+    //[NSApp runModalForWindow:windowVC.window]; 底部window不能操作
     
 }
 
 - (IBAction)showLogAction:(id)sender {
+    
+    if (_logWindowController) {
+        return;
+    }
+    
     LogViewController *windowVC = [[LogViewController alloc] initWithWindowNibName:@"LogViewController"];
     [_mainWindowController.window addChildWindow:windowVC.window ordered:NSWindowAbove];
 }
