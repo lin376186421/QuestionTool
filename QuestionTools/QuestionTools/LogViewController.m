@@ -56,7 +56,7 @@
     [_outLineView reloadData];
     if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
         NSView *contentView = [_scrollView contentView];//就是NSClipView
-        [contentView scrollPoint:CGPointMake(0, (_scrollView.documentView.frame.size.height - _scrollView.frame.size.height))];
+        [contentView scrollPoint:CGPointMake(0, (_scrollView.documentView.frame.size.height - _scrollView.frame.size.height + 10))];
     }
 }
 
@@ -65,7 +65,7 @@
     [_outLineView insertItemsAtIndexes:[NSIndexSet indexSetWithIndex:App_Delegate.logArr.count-1] inParent:nil withAnimation:NSTableViewAnimationEffectFade];
     if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
         NSView *contentView = [_scrollView contentView];//就是NSClipView
-        [contentView scrollPoint:CGPointMake(0, (_scrollView.documentView.frame.size.height - _scrollView.frame.size.height))];
+        [contentView scrollPoint:CGPointMake(0, (_scrollView.documentView.frame.size.height - _scrollView.frame.size.height + 10))];
     }
 }
 
