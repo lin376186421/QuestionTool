@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QuestionsEncryptionViewController.h"
+#import "NSDate+Utils.h"
 
 @interface ViewController()
 {
@@ -195,7 +196,9 @@
 
 - (IBAction)compareAction:(NSView *)sender {
     
-    [App_Delegate addLog:sender.tag == 1 ? @"2017-05-20 14:43:21 sdkdvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbv" : @"2017-05-20 14:43:21 sdkdvfewjvgnk"];
+    NSDate *date = [NSDate date];
+    NSString *dateStr = [date stringValue:yyyyMMddHHmmss];
+    [App_Delegate addLog:sender.tag == 1 ? [NSString stringWithFormat:@"%@ sdkdvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbv",dateStr] : [NSString stringWithFormat:@"%@ sdkdvfewjvgnkwj",dateStr]];
     return;
     
     

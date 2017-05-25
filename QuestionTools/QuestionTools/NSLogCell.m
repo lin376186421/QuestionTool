@@ -30,8 +30,7 @@
 
 + (CGFloat)cellHeightWithItem:(NSString *)log
 {
-    //todo 未搞懂
-    CGRect rect = [log boundingRectWithSize:CGSizeMake(472.f, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontNameAttribute:[NSFont boldSystemFontOfSize:11]}];
+    CGRect rect = [log boundingRectWithSize:CGSizeMake(474.f, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontNameAttribute:[NSFont boldSystemFontOfSize:11]}];
     return rect.size.height;
 }
 

@@ -8,11 +8,15 @@
 
 #import "LogViewController.h"
 #import "NSLogCell.h"
+#import "LogCellPopView.h"
+#import "LogOutLineView.h"
 
 @interface LogViewController ()<NSOutlineViewDelegate,NSOutlineViewDataSource>
 {
-    IBOutlet NSOutlineView *_outLineView;
+    IBOutlet LogOutLineView *_outLineView;
     IBOutlet NSScrollView *_scrollView;
+    NSPopover *_popover;
+    NSUInteger _selectRow;
 }
 
 @end
@@ -33,34 +37,76 @@
     //todo fuck
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logAdd:) name:APP_LOG_ADD_EVENT object:nil];
 //    NSLog(@"%@",App_Delegate.logArr);
-    [_scrollView setLineScroll:0];
-    [_scrollView setPageScroll:0];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectOutView:) name:APP_EVENT_LOG_OUTLINEVIEW_MOUSEDONW object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popAction1:) name:APP_EVENT_POP_ACTION_1 object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popAction2:) name:APP_EVENT_POP_ACTION_2 object:nil];
+    
     _outLineView.delegate = self;
     _outLineView.dataSource = self;
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     [self reloadData];
 }
-
-//- (void)logAdd:(NSNotification *)n
-//{
-//    [self reloadData];
-//}
 
 - (void)reloadData
 {
     [_outLineView reloadData];
-    [_outLineView layoutSubtreeIfNeeded];
-//  其实 _outLineView == _scrollView.documentView
-//    if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
-//        [_scrollView scrollPoint:CGPointMake(0, _scrollView.documentView.frame.size.height-_scrollView.frame.size.height)];
-//    }
-    NSLog(@"%@",NSStringFromSize(_scrollView.documentView.frame.size));
+    if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
+        NSView *contentView = [_scrollView contentView];//就是NSClipView
+        [contentView scrollPoint:CGPointMake(0, (_scrollView.documentView.frame.size.height - _scrollView.frame.size.height))];
+    }
 }
 
 - (void)addLog
 {
-//    [_outLineView insertItemsAtIndexes:[NSIndexSet indexSetWithIndex:App_Delegate.logArr.count] inParent:nil withAnimation:NSTableViewAnimationEffectFade];
-    [self reloadData];
+    [_outLineView insertItemsAtIndexes:[NSIndexSet indexSetWithIndex:App_Delegate.logArr.count-1] inParent:nil withAnimation:NSTableViewAnimationEffectFade];
+    if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
+        NSView *contentView = [_scrollView contentView];//就是NSClipView
+        [contentView scrollPoint:CGPointMake(0, (_scrollView.documentView.frame.size.height - _scrollView.frame.size.height))];
+    }
+}
+
+- (void)selectOutView:(NSNotification *)n
+{
+    NSDictionary *dic = n.object;
+    NSUInteger row = [[dic objectForKey:@"row"] integerValue];
+    [self selectRow:row];
+}
+
+- (void)selectRow:(NSUInteger)row
+{
+    [self createPopover];
+    
+    NSView *rowView = [_outLineView rowViewAtRow:row makeIfNecessary:NO];
+    NSRect frame = rowView.frame;
+    frame.origin.x = frame.origin.y = 0;
+    [_popover showRelativeToRect:frame ofView:rowView preferredEdge:NSMaxYEdge];
+    
+    _selectRow = row;
+}
+
+- (void)createPopover
+{
+    if (_popover == nil)
+    {
+        _popover = [[NSPopover alloc] init];
+        _popover.contentViewController = [[LogCellPopView alloc] initWithNibName:@"LogCellPopView" bundle:nil];
+        _popover.animates = NO;
+        _popover.behavior = NSPopoverBehaviorTransient;
+    }
+}
+
+- (void)popAction1:(NSNotification *)n
+{
+    [_popover close];
+    NSString *info = [App_Delegate.logArr objectAtIndex:_selectRow];
+    [App_Delegate addStrToPasteboard:info];
+}
+
+- (void)popAction2:(NSNotification *)n
+{
+    [_popover close];
+    [App_Delegate.logArr removeObjectAtIndex:_selectRow];
+    [_outLineView removeItemsAtIndexes:[NSIndexSet indexSetWithIndex:_selectRow] inParent:nil withAnimation:NSTableViewAnimationSlideRight];
 }
 
 #pragma mark NSOutlineViewDataSource
@@ -86,20 +132,10 @@
 #pragma mark NSOutlineViewDelegate
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
+    // indentation 缩近距离
     NSLogCell *cell = [[NSLogCell alloc] initWithNibName:@"NSLogCell" bundle:nil];
     [cell view];
     [cell setLog:item];
-    
-//    LessonSeriesCellViewController *cell = [[LessonSeriesCellViewController alloc] init];
-//    
-//    LessonSeriesCellView *cellView = (LessonSeriesCellView *)cell.view;
-//    
-//    if ([item isKindOfClass:[LessonSeries class]])
-//    {
-//        [cellView setLessonSeries:item];
-//        [cellView setIsLocal:_isLocal];
-//    }
-//    return cellView;
     return cell.view;
 }
 - (CGFloat)outlineView:(NSOutlineView *)outlineView heightOfRowByItem:(id)item
@@ -108,16 +144,20 @@
     return h;
 }
 #pragma mark NSOutline Drag
+
 - (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems
 {
     
 }
 - (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation
 {
+    
 }
 
 - (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item
 {
+//    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+//    pasteboard.string = attributedLabel.text;
 //    if ([item isKindOfClass:[LessonSeries class]])
 //    {
 //        return [[NSPasteboardItem alloc] init];
@@ -126,6 +166,11 @@
 //    {
 //        return nil;
 //    }
+//    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+//    [pasteboard setString:(NSString *)item forType:NSGeneralPboard];
+//    NSPasteboardItem *pItem = [[NSPasteboardItem alloc] init];
+//    [pItem setString:(NSString *)item forType:NSPasteboardTypeString];
+//    return pItem;
     return nil;
 }
 
@@ -150,6 +195,7 @@
     
     return NO;
 }
+
 
 
 @end

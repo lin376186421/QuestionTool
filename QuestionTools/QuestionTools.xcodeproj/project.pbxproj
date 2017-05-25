@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E0E7B3B1ECEC29800642B8B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0E7B3A1ECEC29800642B8B /* libsqlite3.tbd */; };
 		3E0E7B3D1ECEC63B00642B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */; };
-		3E17F6B81ED2832800987434 /* LogShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E17F6B61ED2832800987434 /* LogShowViewController.m */; };
-		3E17F6B91ED2832800987434 /* LogShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E17F6B71ED2832800987434 /* LogShowViewController.xib */; };
 		3E73EE9B1ED2B9D900E01A96 /* NSLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E73EE991ED2B9D900E01A96 /* NSLogCell.m */; };
 		3E73EE9C1ED2B9D900E01A96 /* NSLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E73EE9A1ED2B9D900E01A96 /* NSLogCell.xib */; };
 		3EC55EE81ECEC91100C9A5AF /* QuestionsEncryptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55EE61ECEC91100C9A5AF /* QuestionsEncryptionViewController.m */; };
@@ -19,6 +17,13 @@
 		3EC55EF31ECEE09800C9A5AF /* CommentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55EF21ECEE09800C9A5AF /* CommentWindow.m */; };
 		3EC55EF71ECEEB9C00C9A5AF /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55EF51ECEEB9C00C9A5AF /* LogViewController.m */; };
 		3EC55EF81ECEEB9C00C9A5AF /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC55EF61ECEEB9C00C9A5AF /* LogViewController.xib */; };
+		3ED57C701ED6C2BA002ABF07 /* LogCellPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57C6E1ED6C2BA002ABF07 /* LogCellPopView.m */; };
+		3ED57C711ED6C2BA002ABF07 /* LogCellPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED57C6F1ED6C2BA002ABF07 /* LogCellPopView.xib */; };
+		3ED57C771ED6C3A9002ABF07 /* MouseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57C761ED6C3A9002ABF07 /* MouseButton.m */; };
+		3ED57C7E1ED6CBD4002ABF07 /* pop btn bottom highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED57C781ED6CBD4002ABF07 /* pop btn bottom highlight.png */; };
+		3ED57C821ED6CBD4002ABF07 /* pop btn top highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED57C7C1ED6CBD4002ABF07 /* pop btn top highlight.png */; };
+		3ED57C861ED6CC6D002ABF07 /* LogOutLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57C851ED6CC6D002ABF07 /* LogOutLineView.m */; };
+		3ED57C891ED6DB47002ABF07 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57C881ED6DB47002ABF07 /* NSDate+Utils.m */; };
 		3EDAC16B1ECD985B0087CB6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */; };
 		3EDAC16E1ECD985B0087CB6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC16D1ECD985B0087CB6B /* main.m */; };
 		3EDAC1711ECD985B0087CB6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1701ECD985B0087CB6B /* ViewController.m */; };
@@ -51,9 +56,6 @@
 /* Begin PBXFileReference section */
 		3E0E7B3A1ECEC29800642B8B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3E17F6B51ED2832800987434 /* LogShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogShowViewController.h; sourceTree = "<group>"; };
-		3E17F6B61ED2832800987434 /* LogShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogShowViewController.m; sourceTree = "<group>"; };
-		3E17F6B71ED2832800987434 /* LogShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogShowViewController.xib; sourceTree = "<group>"; };
 		3E73EE981ED2B9D900E01A96 /* NSLogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogCell.h; sourceTree = "<group>"; };
 		3E73EE991ED2B9D900E01A96 /* NSLogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogCell.m; sourceTree = "<group>"; };
 		3E73EE9A1ED2B9D900E01A96 /* NSLogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLogCell.xib; sourceTree = "<group>"; };
@@ -67,6 +69,17 @@
 		3EC55EF41ECEEB9C00C9A5AF /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
 		3EC55EF51ECEEB9C00C9A5AF /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
 		3EC55EF61ECEEB9C00C9A5AF /* LogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogViewController.xib; sourceTree = "<group>"; };
+		3ED57C6D1ED6C2BA002ABF07 /* LogCellPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCellPopView.h; sourceTree = "<group>"; };
+		3ED57C6E1ED6C2BA002ABF07 /* LogCellPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCellPopView.m; sourceTree = "<group>"; };
+		3ED57C6F1ED6C2BA002ABF07 /* LogCellPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogCellPopView.xib; sourceTree = "<group>"; };
+		3ED57C751ED6C3A9002ABF07 /* MouseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseButton.h; sourceTree = "<group>"; };
+		3ED57C761ED6C3A9002ABF07 /* MouseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseButton.m; sourceTree = "<group>"; };
+		3ED57C781ED6CBD4002ABF07 /* pop btn bottom highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop btn bottom highlight.png"; sourceTree = "<group>"; };
+		3ED57C7C1ED6CBD4002ABF07 /* pop btn top highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop btn top highlight.png"; sourceTree = "<group>"; };
+		3ED57C841ED6CC6D002ABF07 /* LogOutLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOutLineView.h; sourceTree = "<group>"; };
+		3ED57C851ED6CC6D002ABF07 /* LogOutLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOutLineView.m; sourceTree = "<group>"; };
+		3ED57C871ED6DB47002ABF07 /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		3ED57C881ED6DB47002ABF07 /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
 		3EDAC1661ECD985B0087CB6B /* QuestionTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDAC1691ECD985B0087CB6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,17 +170,23 @@
 				3EDAC19E1ECEA21F0087CB6B /* FUCK */,
 				3EDAC1691ECD985B0087CB6B /* AppDelegate.h */,
 				3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */,
+				3ED57C871ED6DB47002ABF07 /* NSDate+Utils.h */,
+				3ED57C881ED6DB47002ABF07 /* NSDate+Utils.m */,
+				3ED57C751ED6C3A9002ABF07 /* MouseButton.h */,
+				3ED57C761ED6C3A9002ABF07 /* MouseButton.m */,
 				3EC55EF11ECEE09800C9A5AF /* CommentWindow.h */,
 				3EC55EF21ECEE09800C9A5AF /* CommentWindow.m */,
-				3E17F6B51ED2832800987434 /* LogShowViewController.h */,
-				3E17F6B61ED2832800987434 /* LogShowViewController.m */,
-				3E17F6B71ED2832800987434 /* LogShowViewController.xib */,
+				3ED57C6D1ED6C2BA002ABF07 /* LogCellPopView.h */,
+				3ED57C6E1ED6C2BA002ABF07 /* LogCellPopView.m */,
+				3ED57C6F1ED6C2BA002ABF07 /* LogCellPopView.xib */,
 				3EC55EF41ECEEB9C00C9A5AF /* LogViewController.h */,
 				3EC55EF51ECEEB9C00C9A5AF /* LogViewController.m */,
 				3EC55EF61ECEEB9C00C9A5AF /* LogViewController.xib */,
 				3E73EE981ED2B9D900E01A96 /* NSLogCell.h */,
 				3E73EE991ED2B9D900E01A96 /* NSLogCell.m */,
 				3E73EE9A1ED2B9D900E01A96 /* NSLogCell.xib */,
+				3ED57C841ED6CC6D002ABF07 /* LogOutLineView.h */,
+				3ED57C851ED6CC6D002ABF07 /* LogOutLineView.m */,
 				3EDAC16F1ECD985B0087CB6B /* ViewController.h */,
 				3EDAC1701ECD985B0087CB6B /* ViewController.m */,
 				3EC55EE51ECEC91100C9A5AF /* QuestionsEncryptionViewController.h */,
@@ -184,6 +203,8 @@
 		3EDAC16C1ECD985B0087CB6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3ED57C781ED6CBD4002ABF07 /* pop btn bottom highlight.png */,
+				3ED57C7C1ED6CBD4002ABF07 /* pop btn top highlight.png */,
 				3EDAC16D1ECD985B0087CB6B /* main.m */,
 				3E73EE9D1ED2BC3000E01A96 /* QuestionTools.pch */,
 			);
@@ -337,10 +358,12 @@
 				3E73EE9C1ED2B9D900E01A96 /* NSLogCell.xib in Resources */,
 				3EDAC1731ECD985B0087CB6B /* Assets.xcassets in Resources */,
 				3EDAC1B31ECEA21F0087CB6B /* question.db in Resources */,
+				3ED57C821ED6CBD4002ABF07 /* pop btn top highlight.png in Resources */,
 				3EC55EF81ECEEB9C00C9A5AF /* LogViewController.xib in Resources */,
 				3EC55EE91ECEC91100C9A5AF /* QuestionsEncryptionViewController.xib in Resources */,
-				3E17F6B91ED2832800987434 /* LogShowViewController.xib in Resources */,
+				3ED57C711ED6C2BA002ABF07 /* LogCellPopView.xib in Resources */,
 				3E0E7B3D1ECEC63B00642B8B /* Main.storyboard in Resources */,
+				3ED57C7E1ED6CBD4002ABF07 /* pop btn bottom highlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +381,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E17F6B81ED2832800987434 /* LogShowViewController.m in Sources */,
+				3ED57C701ED6C2BA002ABF07 /* LogCellPopView.m in Sources */,
 				3EDAC1AF1ECEA21F0087CB6B /* aes.c in Sources */,
 				3EDAC1711ECD985B0087CB6B /* ViewController.m in Sources */,
 				3EDAC1B11ECEA21F0087CB6B /* fuckme.c in Sources */,
 				3EC55EF31ECEE09800C9A5AF /* CommentWindow.m in Sources */,
 				3EC55EF71ECEEB9C00C9A5AF /* LogViewController.m in Sources */,
 				3EDAC1B01ECEA21F0087CB6B /* fuck_wrapper.m in Sources */,
+				3ED57C891ED6DB47002ABF07 /* NSDate+Utils.m in Sources */,
 				3EDAC1A91ECEA21F0087CB6B /* README.markdown in Sources */,
+				3ED57C861ED6CC6D002ABF07 /* LogOutLineView.m in Sources */,
 				3EDAC16E1ECD985B0087CB6B /* main.m in Sources */,
 				3EDAC1AA1ECEA21F0087CB6B /* FMDatabase.m in Sources */,
 				3EDAC1AE1ECEA21F0087CB6B /* FMResultSet.m in Sources */,
@@ -374,6 +399,7 @@
 				3EDAC1AB1ECEA21F0087CB6B /* FMDatabaseAdditions.m in Sources */,
 				3EC55EE81ECEC91100C9A5AF /* QuestionsEncryptionViewController.m in Sources */,
 				3EDAC1B21ECEA21F0087CB6B /* hexstring.c in Sources */,
+				3ED57C771ED6C3A9002ABF07 /* MouseButton.m in Sources */,
 				3EDAC1AD1ECEA21F0087CB6B /* FMDatabaseQueue.m in Sources */,
 				3E73EE9B1ED2B9D900E01A96 /* NSLogCell.m in Sources */,
 			);

@@ -61,14 +61,23 @@
     //两个window都能操作
     QuestionsEncryptionViewController *windowVC = [[QuestionsEncryptionViewController alloc] initWithWindowNibName:@"QuestionsEncryptionViewController"];
     [_mainWindowController.window addChildWindow:windowVC.window ordered:NSWindowAbove];
+
     
 }
 
 - (IBAction)showLogAction:(id)sender {
-//    LogShowViewController *windowVC = [[LogShowViewController alloc] initWithWindowNibName:@"LogShowViewController"];
-//    [_mainWindowController.window addChildWindow:windowVC.window ordered:NSWindowAbove];
     LogViewController *windowVC = [[LogViewController alloc] initWithWindowNibName:@"LogViewController"];
     [_mainWindowController.window addChildWindow:windowVC.window ordered:NSWindowAbove];
+}
+
+- (void)addStrToPasteboard:(NSString *)str
+{
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    
+    [pb declareTypes:[NSArray arrayWithObject:NSStringPboardType]
+               owner:self];
+    BOOL ret = [pb setString:str forType:NSStringPboardType];
+    NSLog(@"%zd",ret);
 }
 
 @end
