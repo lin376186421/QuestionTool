@@ -45,11 +45,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectOutView:) name:APP_EVENT_LOG_OUTLINEVIEW_MOUSEDONW object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popAction1:) name:APP_EVENT_POP_ACTION_1 object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popAction2:) name:APP_EVENT_POP_ACTION_2 object:nil];
-    
     _outLineView.delegate = self;
     _outLineView.dataSource = self;
     [self reloadData];
 }
+
+//- (void)windowDidResize:(NSNotification *)notification
+//{
+//    [self reloadData];
+//}
 
 - (void)reloadData
 {
@@ -144,7 +148,7 @@
 }
 - (CGFloat)outlineView:(NSOutlineView *)outlineView heightOfRowByItem:(id)item
 {
-    CGFloat h = [NSLogCell cellHeightWithItem:item];
+    CGFloat h = [NSLogCell cellHeightWithItem:item windowFrame:self.window.frame];
     return h;
 }
 #pragma mark NSOutline Drag

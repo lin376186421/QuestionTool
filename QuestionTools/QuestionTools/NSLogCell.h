@@ -14,6 +14,6 @@
 
 @property (strong) IBOutlet NSTextField *logLabel;
 
-+ (CGFloat)cellHeightWithItem:(NSString *)log;
++ (CGFloat)cellHeightWithItem:(NSString *)log windowFrame:(NSRect)windowFrame;
 
 @end

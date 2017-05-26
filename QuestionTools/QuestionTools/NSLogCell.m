@@ -28,9 +28,10 @@
     self.logLabel.stringValue = log;
 }
 
-+ (CGFloat)cellHeightWithItem:(NSString *)log
++ (CGFloat)cellHeightWithItem:(NSString *)log windowFrame:(NSRect)windowFrame
 {
-    CGRect rect = [log boundingRectWithSize:CGSizeMake(474.f, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontNameAttribute:[NSFont boldSystemFontOfSize:11]}];
+    //474.f
+    CGRect rect = [log boundingRectWithSize:CGSizeMake(windowFrame.size.width-6, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontNameAttribute:[NSFont boldSystemFontOfSize:11]}];
     return rect.size.height;
 }
 
