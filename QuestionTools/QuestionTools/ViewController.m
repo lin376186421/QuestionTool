@@ -93,6 +93,11 @@
     if (textField == nil) {
         return;
     }
+    
+    if (textField.window != self.view.window) {
+        return;
+    }
+    
     NSString *fullPath = textField.stringValue;
     NSString *lastPath = [fullPath lastPathComponent];
     [textField setStringValue:lastPath];
