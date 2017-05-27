@@ -252,26 +252,6 @@
 
 }
 
-- (void)endWork
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        _barProgress.hidden = YES;
-        _resultLb.hidden = NO;
-        if(_eBtn.state == 1){
-            [_resultLb setStringValue:[NSString stringWithFormat:@"加密完成:%@",_newFilePath]];
-        }else{
-            [_resultLb setStringValue:[NSString stringWithFormat:@"解密完成:%@",_newFilePath]];
-        }
-        _eBtn.enabled = YES;
-        _dBtn.enabled = YES;
-        _makeBtn.enabled = YES;
-        
-        [_opQueue cancelAllOperations];
-        NSLog(@"finish");
-    });
-}
-
-
 //- (void)setRepresentedObject:(id)representedObject {
 //    [super setRepresentedObject:representedObject];
 //    

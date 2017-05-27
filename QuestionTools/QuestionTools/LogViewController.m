@@ -151,16 +151,6 @@
     CGFloat h = [NSLogCell cellHeightWithItem:item windowFrame:self.window.frame];
     return h;
 }
-
-- (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item
-{
-    NSLog(@"%@",item);
-    //右键点击不能用此方法
-//    NSUInteger row = [App_Delegate.logArr indexOfObject:item];
-//    [self selectRow:row];
-    return YES;
-}
-
 #pragma mark NSOutline Drag
 
 - (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems
