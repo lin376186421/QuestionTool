@@ -195,6 +195,11 @@
     
 }
 
+- (void)workWithStartIndex:(NSUInteger)startIndex endIndex:(NSUInteger)endIndex
+{
+    
+}
+
 
 //- (void)setRepresentedObject:(id)representedObject {
 //    [super setRepresentedObject:representedObject];
