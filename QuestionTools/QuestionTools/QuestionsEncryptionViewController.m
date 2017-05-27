@@ -13,11 +13,7 @@
 
 @interface QuestionsEncryptionViewController ()
 {
-    FMDatabaseQueue *_dbQueue;
-    BOOL _isEncrypt;
-    NSString *_newFilePath;
-    NSUInteger _curCount;
-    NSOperationQueue *_opQueue;
+
 }
 
 @end
@@ -34,8 +30,6 @@
     [super windowDidLoad];
     
     [App_Delegate setQuestionsEncryptionWindowController:self];
-    _opQueue = [[NSOperationQueue alloc] init];
-    _opQueue.maxConcurrentOperationCount = 5.f;
     
     _eBtn.state = 0;
     _dBtn.state = 1;
@@ -100,7 +94,6 @@
 }
 
 - (void)wholeTxt:(BOOL)encrypt {
-    _isEncrypt = encrypt;
     if([_textInput stringValue].length <= 0)
     {
         [self showAlterWithMessage:@"请输入文件路径"];
@@ -143,7 +136,6 @@
     [[NSFileManager defaultManager] removeItemAtPath:newFilePath error:nil];//删除原有的文件
     [[NSFileManager defaultManager] copyItemAtPath:oldPath toPath:newFilePath error:nil];
     NSString *path = newFilePath;
-    _newFilePath = newFilePath;
     
     FMDatabase *db = [FMDatabase databaseWithPath:path];
     [db open];
@@ -156,72 +148,15 @@
     _eBtn.enabled = NO;
     _dBtn.enabled = NO;
     _makeBtn.enabled = NO;
-    
-    FMDatabaseQueue *dbQueue = [FMDatabaseQueue databaseQueueWithPath:path];
-    _dbQueue = dbQueue;
-    _curCount = 0;
-    
-    NSUInteger maxCount = 2000;//每个线程最多处理条数
-    
-    NSInteger times = _totalCount/maxCount + 1;
-    for (int i = 0; i < times; i++) {
-        NSUInteger startIndex = maxCount*i;
-        NSUInteger endIndex = maxCount*(i+1);
-        if (i==times-1) {
-            endIndex = _totalCount;
-        }
-        [self workWithStartIndex:startIndex endIndex:endIndex];
-    }
-}
-
-- (void)workWithStartIndex:(NSUInteger)startIndex endIndex:(NSUInteger)endIndex
-{
-    NSBlockOperation *op = [NSBlockOperation new];
-    [op addExecutionBlock:^{
-        [_dbQueue inDatabase:^(FMDatabase *db) {
-            NSString *sqlStr = [NSString stringWithFormat:@"select course, question_id, question, answer, comments from dt_question limit %zd,%zd",startIndex,(endIndex-startIndex)];
-            FMResultSet *rs = [db executeQuery:sqlStr];
-            while ([rs next]) {
-                _curCount += 1;
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    CGFloat f = 1.0f*_curCount/_totalCount;
-                    _barProgress.doubleValue = f;
-                });
-                NSString *course = [rs stringForColumnIndex:0];
-                NSString *question_id = [rs stringForColumnIndex:1];
-                NSString *question;
-                NSString *answer;
-                NSString *comments;
-                if (_isEncrypt) {
-                    question = sell_coffee([rs stringForColumnIndex:2], questionWrapper);
-                    answer   = sell_coffee([rs stringForColumnIndex:3], answerWrapper);
-                    comments = sell_coffee([rs stringForColumnIndex:4], commentsWrapper);
-                } else {
-                    question = buy_coffee([rs stringForColumnIndex:2], questionWrapper);
-                    answer   = buy_coffee([rs stringForColumnIndex:3], answerWrapper);
-                    comments = buy_coffee([rs stringForColumnIndex:4], commentsWrapper);
-                }
-                NSString *sql = [NSString stringWithFormat:@"update dt_question set question='%@', answer='%@', comments=%@ where course=%@ and question_id=%@", question, answer, comments?[NSString stringWithFormat:@"'%@'", comments]:@"null", course, question_id];
-                [db executeUpdate:sql];
-            }
-            [rs close];
-            if (_curCount >= _totalCount) {
-                [self endWork];
-            }
-            
-        }];
-
-    }];
-    [_opQueue addOperation:op];
-    return;
+    __block NSUInteger curCount = 0;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_dbQueue inDatabase:^(FMDatabase *db) {
-            NSString *sqlStr = [NSString stringWithFormat:@"select course, question_id, question, answer, comments from dt_question limit %zd,%zd",startIndex,(endIndex-startIndex)];
-            FMResultSet *rs = [db executeQuery:sqlStr];
+        FMDatabaseQueue *dbQueue = [FMDatabaseQueue databaseQueueWithPath:path];
+        [dbQueue inDatabase:^(FMDatabase *db) {
+            FMResultSet *rs = [db executeQuery:@"select course, question_id, question, answer, comments from dt_question"];
             while ([rs next]) {
-                _curCount += 1;
+                curCount += 1;
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    CGFloat f = 1.0f*_curCount/_totalCount;
+                    CGFloat f = 1.0f*curCount/_totalCount;
                     _barProgress.doubleValue = f;
                 });
                 NSString *course = [rs stringForColumnIndex:0];
@@ -229,7 +164,7 @@
                 NSString *question;
                 NSString *answer;
                 NSString *comments;
-                if (_isEncrypt) {
+                if (encrypt) {
                     question = sell_coffee([rs stringForColumnIndex:2], questionWrapper);
                     answer   = sell_coffee([rs stringForColumnIndex:3], answerWrapper);
                     comments = sell_coffee([rs stringForColumnIndex:4], commentsWrapper);
@@ -242,20 +177,24 @@
                 [db executeUpdate:sql];
             }
             [rs close];
-            if (_curCount >= _totalCount) {
-                [self endWork];
-            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _barProgress.hidden = YES;
+                _resultLb.hidden = NO;
+                if(_eBtn.state == 1){
+                    [_resultLb setStringValue:[NSString stringWithFormat:@"加密完成:%@",newFilePath]];
+                }else{
+                    [_resultLb setStringValue:[NSString stringWithFormat:@"解密完成:%@",newFilePath]];
+                }
+                _eBtn.enabled = YES;
+                _dBtn.enabled = YES;
+                _makeBtn.enabled = YES;
+                NSLog(@"finish");
+            });
             
         }];
         
     });
-
 }
-//- (void)setRepresentedObject:(id)representedObject {
-//    [super setRepresentedObject:representedObject];
-//    
-//    // Update the view, if already loaded.
-//}
 
 - (IBAction)eAction:(id)sender {
     _eBtn.state = 1;
