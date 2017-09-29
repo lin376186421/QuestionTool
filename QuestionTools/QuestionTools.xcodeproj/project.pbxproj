@@ -339,6 +339,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QuestionTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.owen.QuestionTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +352,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QuestionTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.owen.QuestionTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -399,6 +401,7 @@
 				3EDAC1871ECD985B0087CB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EDAC1881ECD985B0087CB6B /* Build configuration list for PBXNativeTarget "QuestionToolsUITests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +410,7 @@
 				3EDAC18A1ECD985B0087CB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
