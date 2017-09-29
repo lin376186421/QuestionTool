@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "QuestionsEncryptionViewController.h"
+#import "NSDate+Utils.h"
 
 @interface ViewController()
 {
@@ -91,6 +93,11 @@
     if (textField == nil) {
         return;
     }
+    
+    if (textField.window != self.view.window) {
+        return;
+    }
+    
     NSString *fullPath = textField.stringValue;
     NSString *lastPath = [fullPath lastPathComponent];
     [textField setStringValue:lastPath];
@@ -193,11 +200,23 @@
 //}
 
 - (IBAction)compareAction:(NSView *)sender {
+    
+    NSDate *date = [NSDate date];
+    NSString *dateStr = [date stringValue:yyyyMMddHHmmss];
+    [App_Delegate addLog:sender.tag == 1 ? [NSString stringWithFormat:@"%@ sdkdvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbv",dateStr] : [NSString stringWithFormat:@"%@ sdkdvfewjvgnkwj",dateStr]];
+    return;
+    
+    
     BOOL _newPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_jingpinNewFullPathLabel.stringValue];
     BOOL _oldPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_jingpinOldFullPathLabel.stringValue];
     BOOL _kjzPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_kjzFullPathLabel.stringValue];
     NSUInteger certType = [self certType];//驾照类型
-//    _course//科目
+    
+    
+//    NSWindow *window = self.view.window;
+//    [window setFrame:CGRectMake(0, 0, 580, 400) display:YES];
+//    return;
+//    _course//科目 x X
 //    _isAuto//
 //    _isCL_DB//
 //    _isCreateFile
