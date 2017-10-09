@@ -173,6 +173,7 @@
                     answer   = buy_coffee([rs stringForColumnIndex:3], answerWrapper);
                     comments = buy_coffee([rs stringForColumnIndex:4], commentsWrapper);
                 }
+                [App_Delegate addLog:[NSString stringWithFormat:@"当前正在%@题目：%@",encrypt?@"加密":@"解密",question]];
                 NSString *sql = [NSString stringWithFormat:@"update dt_question set question='%@', answer='%@', comments=%@ where course=%@ and question_id=%@", question, answer, comments?[NSString stringWithFormat:@"'%@'", comments]:@"null", course, question_id];
                 [db executeUpdate:sql];
             }
@@ -188,6 +189,7 @@
                 _eBtn.enabled = YES;
                 _dBtn.enabled = YES;
                 _makeBtn.enabled = YES;
+                [App_Delegate addLog:[NSString stringWithFormat:@"%@完成",encrypt?@"加密":@"解密"]];
                 NSLog(@"finish");
             });
             

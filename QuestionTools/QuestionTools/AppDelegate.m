@@ -10,6 +10,12 @@
 #import "QuestionsEncryptionViewController.h"
 #import "LogViewController.h"
 #import "QuestionsEncryptionViewController.h"
+#import "NSDate+Utils.h"
+
+#define LOG_MODE 2 //1输出日志缓存不清空  2关闭输出日志弹框 清空缓存
+
+#define LOG_CREATE_TIME 1 //1 log信息 默认加上日期 （精确到秒）
+
 @interface AppDelegate ()
 {
     NSStoryboard *_storyboard;
@@ -37,6 +43,9 @@
 
 - (void)setLogWindowController:(NSWindowController *)windowVC
 {
+    if (LOG_MODE == 2) {
+        [self.logArr removeAllObjects];
+    }
     _logWindowController = (id)windowVC;
 }
 
@@ -47,6 +56,25 @@
 
 - (void)addLog:(NSString *)log
 {
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self addLog:log];
+        });
+        return;
+    }
+    
+    if (LOG_MODE == 2 && _logWindowController == nil) {
+        return;
+    }
+    
+    if ([log isKindOfClass:[NSString class]] && log.length <= 0) {
+        return;
+    }
+    
+    NSDate *date = [NSDate date];
+    NSString *dateStr = [date stringValue:yyyyMMddHHmmss];
+    log = [NSString stringWithFormat:@"%@ %@",dateStr,log];
+    
     if (_logArr == nil) {
         _logArr = [NSMutableArray array];
     }

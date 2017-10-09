@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "QuestionsEncryptionViewController.h"
-#import "NSDate+Utils.h"
+
 
 @interface ViewController()
 {
@@ -200,13 +200,7 @@
 //}
 
 - (IBAction)compareAction:(NSView *)sender {
-    
-    NSDate *date = [NSDate date];
-    NSString *dateStr = [date stringValue:yyyyMMddHHmmss];
-    [App_Delegate addLog:sender.tag == 1 ? [NSString stringWithFormat:@"%@ sdkdvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbvvfewjvgnkwjergvwhiuehvgwuegadshfwehfwegfhweghwgdcfsbv",dateStr] : [NSString stringWithFormat:@"%@ sdkdvfewjvgnkwj",dateStr]];
-    return;
-    
-    
+
     BOOL _newPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_jingpinNewFullPathLabel.stringValue];
     BOOL _oldPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_jingpinOldFullPathLabel.stringValue];
     BOOL _kjzPatnVaild = [[NSFileManager defaultManager] fileExistsAtPath:_kjzFullPathLabel.stringValue];
