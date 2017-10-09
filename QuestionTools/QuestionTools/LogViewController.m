@@ -68,7 +68,8 @@
 {
     [_outLineView insertItemsAtIndexes:[NSIndexSet indexSetWithIndex:App_Delegate.logArr.count-1] inParent:nil withAnimation:NSTableViewAnimationEffectFade];
     if (_scrollView.documentView.frame.size.height > _scrollView.frame.size.height) {
-        NSView *contentView = [_scrollView contentView];//就是NSClipView
+        NSView *contentView = [_scrollView contentView];//就是NSClipView 大小固定   documentView size变化
+//        NSLog(@"%@   %@",NSStringFromRect(_scrollView.documentView.frame),NSStringFromRect(contentView.frame));
         [contentView scrollPoint:CGPointMake(0, (_scrollView.documentView.frame.size.height - _scrollView.frame.size.height + 10))];
     }
 }
@@ -153,17 +154,17 @@
 }
 #pragma mark NSOutline Drag
 
-- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems
-{
-    
-}
-- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation
-{
-    
-}
+//- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems
+//{
+//    
+//}
+//- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation
+//{
+//    
+//}
 
-- (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item
-{
+//- (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item
+//{
 //    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 //    pasteboard.string = attributedLabel.text;
 //    if ([item isKindOfClass:[LessonSeries class]])
@@ -179,30 +180,30 @@
 //    NSPasteboardItem *pItem = [[NSPasteboardItem alloc] init];
 //    [pItem setString:(NSString *)item forType:NSPasteboardTypeString];
 //    return pItem;
-    return nil;
-}
+//    return nil;
+//}
 
-- (NSDragOperation)outlineView:(NSOutlineView *)outlineView validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(NSInteger)index
-{
-    if (index >= 0)
-    {
-        return NSDragOperationMove;
-    }
-    else
-    {
-        return NSDragOperationNone;
-    }
-}
-
-- (BOOL)outlineView:(NSOutlineView *)outlineView acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(NSInteger)index
-{
-    if (index >= 0)
-    {
-        return YES;
-    }
-    
-    return NO;
-}
+//- (NSDragOperation)outlineView:(NSOutlineView *)outlineView validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(NSInteger)index
+//{
+//    if (index >= 0)
+//    {
+//        return NSDragOperationMove;
+//    }
+//    else
+//    {
+//        return NSDragOperationNone;
+//    }
+//}
+//
+//- (BOOL)outlineView:(NSOutlineView *)outlineView acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(NSInteger)index
+//{
+//    if (index >= 0)
+//    {
+//        return YES;
+//    }
+//    
+//    return NO;
+//}
 
 
 
