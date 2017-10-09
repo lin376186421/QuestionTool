@@ -27,7 +27,8 @@
 
 - (void)showWindow:(NSWindowController *)windowVC
 {
-    [[NSApplication sharedApplication].keyWindow addChildWindow:windowVC.window ordered:NSWindowAbove];
+//    [[NSApplication sharedApplication].keyWindow addChildWindow:windowVC.window ordered:NSWindowAbove];
+    [NSApp runModalForWindow:windowVC.window];
 }
 
 - (IBAction)compareQuestion:(id)sender {

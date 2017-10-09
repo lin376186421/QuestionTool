@@ -30,6 +30,13 @@
     [_submitBtn setTarget:self];
 }
 
+- (void)windowWillClose:(NSNotification *)notification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//    [App_Delegate setQuestionsEncryptionWindowController:nil];
+    [NSApp stopModalWithCode:0];
+}
+
 - (IBAction)submitBtnAction:(id)sender {
 //    NSString *path = [_pathTextField stringValue];
 //    NSString *target1 = [_targetTextField1 stringValue];
