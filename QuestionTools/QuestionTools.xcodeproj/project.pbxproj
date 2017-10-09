@@ -41,6 +41,46 @@
 		3EDAC1B11ECEA21F0087CB6B /* fuckme.c in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1A31ECEA21F0087CB6B /* fuckme.c */; };
 		3EDAC1B21ECEA21F0087CB6B /* hexstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAC1A51ECEA21F0087CB6B /* hexstring.c */; };
 		3EDAC1B31ECEA21F0087CB6B /* question.db in Resources */ = {isa = PBXBuildFile; fileRef = 3EDAC1A71ECEA21F0087CB6B /* question.db */; };
+		60983F141F7E55A60002CAE4 /* QuestionCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983F121F7E55A60002CAE4 /* QuestionCompareController.m */; };
+		60983F151F7E55A60002CAE4 /* QuestionCompareController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60983F131F7E55A60002CAE4 /* QuestionCompareController.xib */; };
+		60983F191F7E5F590002CAE4 /* ProjectFileCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983F171F7E5F590002CAE4 /* ProjectFileCompareController.m */; };
+		60983F1A1F7E5F590002CAE4 /* ProjectFileCompareController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60983F181F7E5F590002CAE4 /* ProjectFileCompareController.xib */; };
+		60EF80CE1F7F793900E90329 /* OCProjectParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80CD1F7F793900E90329 /* OCProjectParse.m */; };
+		60EF80DD1F7F7A1D00E90329 /* FFJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80D41F7F7A1D00E90329 /* FFJSONHelper.m */; };
+		60EF80DE1F7F7A1D00E90329 /* FFOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80D61F7F7A1D00E90329 /* FFOrderedDictionary.m */; };
+		60EF80DF1F7F7A1D00E90329 /* NSArray+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80D81F7F7A1D00E90329 /* NSArray+Utils.m */; };
+		60EF80E01F7F7A1D00E90329 /* NSDictionary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80DA1F7F7A1D00E90329 /* NSDictionary+Utils.m */; };
+		60EF80E11F7F7A1D00E90329 /* RFJModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80DC1F7F7A1D00E90329 /* RFJModel.m */; };
+		60EF80E61F7F7A2900E90329 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80E41F7F7A2900E90329 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		60EF81041F7F7A3900E90329 /* Base_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80EA1F7F7A3900E90329 /* Base_DB.m */; };
+		60EF81051F7F7A3900E90329 /* JKBD_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80EC1F7F7A3900E90329 /* JKBD_DB.m */; };
+		60EF81061F7F7A3900E90329 /* JXYDT_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80EE1F7F7A3900E90329 /* JXYDT_DB.m */; };
+		60EF81071F7F7A3900E90329 /* YBJK_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80F01F7F7A3900E90329 /* YBJK_DB.m */; };
+		60EF81081F7F7A3900E90329 /* FFQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80F21F7F7A3900E90329 /* FFQuestionItem.m */; };
+		60EF81091F7F7A3900E90329 /* KJZ_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80F41F7F7A3900E90329 /* KJZ_DB.m */; };
+		60EF810A1F7F7A3900E90329 /* FFCXTCourseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80F71F7F7A3900E90329 /* FFCXTCourseItem.m */; };
+		60EF810B1F7F7A3900E90329 /* FFCXTQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80F91F7F7A3900E90329 /* FFCXTQuestionItem.m */; };
+		60EF810C1F7F7A3900E90329 /* FFJKBDQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80FB1F7F7A3900E90329 /* FFJKBDQuestionItem.m */; };
+		60EF810D1F7F7A3900E90329 /* FFJKCRQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80FD1F7F7A3900E90329 /* FFJKCRQuestionItem.m */; };
+		60EF810E1F7F7A3900E90329 /* FFJXYDTQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80FF1F7F7A3900E90329 /* FFJXYDTQuestionItem.m */; };
+		60EF810F1F7F7A3900E90329 /* FFXCBDQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81011F7F7A3900E90329 /* FFXCBDQuestionItem.m */; };
+		60EF81101F7F7A3900E90329 /* FFYBJKQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81031F7F7A3900E90329 /* FFYBJKQuestionItem.m */; };
+		60EF812F1F7F7A5D00E90329 /* KJZChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81161F7F7A5D00E90329 /* KJZChapter.m */; };
+		60EF81301F7F7A5D00E90329 /* KJZNocomment.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81181F7F7A5D00E90329 /* KJZNocomment.m */; };
+		60EF81311F7F7A5D00E90329 /* KJZSameAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF811A1F7F7A5D00E90329 /* KJZSameAnswer.m */; };
+		60EF81321F7F7A5D00E90329 /* KJZSameComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF811C1F7F7A5D00E90329 /* KJZSameComment.m */; };
+		60EF81331F7F7A5D00E90329 /* KJZSubjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF811E1F7F7A5D00E90329 /* KJZSubjects.m */; };
+		60EF81341F7F7A5D00E90329 /* KJZVIPSameExamPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81201F7F7A5D00E90329 /* KJZVIPSameExamPoint.m */; };
+		60EF81351F7F7A5D00E90329 /* MethodObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81221F7F7A5D00E90329 /* MethodObject.m */; };
+		60EF81371F7F7A5D00E90329 /* SqlString.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81261F7F7A5D00E90329 /* SqlString.m */; };
+		60EF81381F7F7A5D00E90329 /* testt2.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81281F7F7A5D00E90329 /* testt2.m */; };
+		60EF81391F7F7A5D00E90329 /* Tiku.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF812A1F7F7A5D00E90329 /* Tiku.m */; };
+		60EF813A1F7F7A5D00E90329 /* VIPID.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF812C1F7F7A5D00E90329 /* VIPID.m */; };
+		60EF813B1F7F7A5D00E90329 /* XuanZeAndPanDuan.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF812E1F7F7A5D00E90329 /* XuanZeAndPanDuan.m */; };
+		60EF81431F7F7AF000E90329 /* FFDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF813E1F7F7AF000E90329 /* FFDatabase.m */; };
+		60EF81441F7F7AF000E90329 /* FFDBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81401F7F7AF000E90329 /* FFDBObject.m */; };
+		60EF81451F7F7AF000E90329 /* FMDatabase+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81421F7F7AF000E90329 /* FMDatabase+Utils.m */; };
+		60EF81481F7F7CC800E90329 /* KeyVipCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF81471F7F7CC800E90329 /* KeyVipCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +153,85 @@
 		3EDAC1A51ECEA21F0087CB6B /* hexstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hexstring.c; sourceTree = "<group>"; };
 		3EDAC1A61ECEA21F0087CB6B /* hexstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hexstring.h; sourceTree = "<group>"; };
 		3EDAC1A71ECEA21F0087CB6B /* question.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = question.db; sourceTree = "<group>"; };
+		60983F111F7E55A60002CAE4 /* QuestionCompareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCompareController.h; sourceTree = "<group>"; };
+		60983F121F7E55A60002CAE4 /* QuestionCompareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCompareController.m; sourceTree = "<group>"; };
+		60983F131F7E55A60002CAE4 /* QuestionCompareController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCompareController.xib; sourceTree = "<group>"; };
+		60983F161F7E5F590002CAE4 /* ProjectFileCompareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectFileCompareController.h; sourceTree = "<group>"; };
+		60983F171F7E5F590002CAE4 /* ProjectFileCompareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectFileCompareController.m; sourceTree = "<group>"; };
+		60983F181F7E5F590002CAE4 /* ProjectFileCompareController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectFileCompareController.xib; sourceTree = "<group>"; };
+		60EF80CC1F7F793900E90329 /* OCProjectParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCProjectParse.h; sourceTree = "<group>"; };
+		60EF80CD1F7F793900E90329 /* OCProjectParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCProjectParse.m; sourceTree = "<group>"; };
+		60EF80D31F7F7A1D00E90329 /* FFJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFJSONHelper.h; sourceTree = "<group>"; };
+		60EF80D41F7F7A1D00E90329 /* FFJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFJSONHelper.m; sourceTree = "<group>"; };
+		60EF80D51F7F7A1D00E90329 /* FFOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFOrderedDictionary.h; sourceTree = "<group>"; };
+		60EF80D61F7F7A1D00E90329 /* FFOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFOrderedDictionary.m; sourceTree = "<group>"; };
+		60EF80D71F7F7A1D00E90329 /* NSArray+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utils.h"; sourceTree = "<group>"; };
+		60EF80D81F7F7A1D00E90329 /* NSArray+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utils.m"; sourceTree = "<group>"; };
+		60EF80D91F7F7A1D00E90329 /* NSDictionary+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utils.h"; sourceTree = "<group>"; };
+		60EF80DA1F7F7A1D00E90329 /* NSDictionary+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utils.m"; sourceTree = "<group>"; };
+		60EF80DB1F7F7A1D00E90329 /* RFJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFJModel.h; sourceTree = "<group>"; };
+		60EF80DC1F7F7A1D00E90329 /* RFJModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFJModel.m; sourceTree = "<group>"; };
+		60EF80E31F7F7A2900E90329 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		60EF80E41F7F7A2900E90329 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		60EF80E51F7F7A2900E90329 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		60EF80E91F7F7A3900E90329 /* Base_DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base_DB.h; sourceTree = "<group>"; };
+		60EF80EA1F7F7A3900E90329 /* Base_DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base_DB.m; sourceTree = "<group>"; };
+		60EF80EB1F7F7A3900E90329 /* JKBD_DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKBD_DB.h; sourceTree = "<group>"; };
+		60EF80EC1F7F7A3900E90329 /* JKBD_DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKBD_DB.m; sourceTree = "<group>"; };
+		60EF80ED1F7F7A3900E90329 /* JXYDT_DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXYDT_DB.h; sourceTree = "<group>"; };
+		60EF80EE1F7F7A3900E90329 /* JXYDT_DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXYDT_DB.m; sourceTree = "<group>"; };
+		60EF80EF1F7F7A3900E90329 /* YBJK_DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBJK_DB.h; sourceTree = "<group>"; };
+		60EF80F01F7F7A3900E90329 /* YBJK_DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBJK_DB.m; sourceTree = "<group>"; };
+		60EF80F11F7F7A3900E90329 /* FFQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFQuestionItem.h; sourceTree = "<group>"; };
+		60EF80F21F7F7A3900E90329 /* FFQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFQuestionItem.m; sourceTree = "<group>"; };
+		60EF80F31F7F7A3900E90329 /* KJZ_DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJZ_DB.h; sourceTree = "<group>"; };
+		60EF80F41F7F7A3900E90329 /* KJZ_DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJZ_DB.m; sourceTree = "<group>"; };
+		60EF80F61F7F7A3900E90329 /* FFCXTCourseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCXTCourseItem.h; sourceTree = "<group>"; };
+		60EF80F71F7F7A3900E90329 /* FFCXTCourseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCXTCourseItem.m; sourceTree = "<group>"; };
+		60EF80F81F7F7A3900E90329 /* FFCXTQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCXTQuestionItem.h; sourceTree = "<group>"; };
+		60EF80F91F7F7A3900E90329 /* FFCXTQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCXTQuestionItem.m; sourceTree = "<group>"; };
+		60EF80FA1F7F7A3900E90329 /* FFJKBDQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFJKBDQuestionItem.h; sourceTree = "<group>"; };
+		60EF80FB1F7F7A3900E90329 /* FFJKBDQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFJKBDQuestionItem.m; sourceTree = "<group>"; };
+		60EF80FC1F7F7A3900E90329 /* FFJKCRQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFJKCRQuestionItem.h; sourceTree = "<group>"; };
+		60EF80FD1F7F7A3900E90329 /* FFJKCRQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFJKCRQuestionItem.m; sourceTree = "<group>"; };
+		60EF80FE1F7F7A3900E90329 /* FFJXYDTQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFJXYDTQuestionItem.h; sourceTree = "<group>"; };
+		60EF80FF1F7F7A3900E90329 /* FFJXYDTQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFJXYDTQuestionItem.m; sourceTree = "<group>"; };
+		60EF81001F7F7A3900E90329 /* FFXCBDQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCBDQuestionItem.h; sourceTree = "<group>"; };
+		60EF81011F7F7A3900E90329 /* FFXCBDQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCBDQuestionItem.m; sourceTree = "<group>"; };
+		60EF81021F7F7A3900E90329 /* FFYBJKQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFYBJKQuestionItem.h; sourceTree = "<group>"; };
+		60EF81031F7F7A3900E90329 /* FFYBJKQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFYBJKQuestionItem.m; sourceTree = "<group>"; };
+		60EF81151F7F7A5D00E90329 /* KJZChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJZChapter.h; sourceTree = "<group>"; };
+		60EF81161F7F7A5D00E90329 /* KJZChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJZChapter.m; sourceTree = "<group>"; };
+		60EF81171F7F7A5D00E90329 /* KJZNocomment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJZNocomment.h; sourceTree = "<group>"; };
+		60EF81181F7F7A5D00E90329 /* KJZNocomment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJZNocomment.m; sourceTree = "<group>"; };
+		60EF81191F7F7A5D00E90329 /* KJZSameAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJZSameAnswer.h; sourceTree = "<group>"; };
+		60EF811A1F7F7A5D00E90329 /* KJZSameAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJZSameAnswer.m; sourceTree = "<group>"; };
+		60EF811B1F7F7A5D00E90329 /* KJZSameComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJZSameComment.h; sourceTree = "<group>"; };
+		60EF811C1F7F7A5D00E90329 /* KJZSameComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJZSameComment.m; sourceTree = "<group>"; };
+		60EF811D1F7F7A5D00E90329 /* KJZSubjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJZSubjects.h; sourceTree = "<group>"; };
+		60EF811E1F7F7A5D00E90329 /* KJZSubjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJZSubjects.m; sourceTree = "<group>"; };
+		60EF811F1F7F7A5D00E90329 /* KJZVIPSameExamPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJZVIPSameExamPoint.h; sourceTree = "<group>"; };
+		60EF81201F7F7A5D00E90329 /* KJZVIPSameExamPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJZVIPSameExamPoint.m; sourceTree = "<group>"; };
+		60EF81211F7F7A5D00E90329 /* MethodObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodObject.h; sourceTree = "<group>"; };
+		60EF81221F7F7A5D00E90329 /* MethodObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodObject.m; sourceTree = "<group>"; };
+		60EF81251F7F7A5D00E90329 /* SqlString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlString.h; sourceTree = "<group>"; };
+		60EF81261F7F7A5D00E90329 /* SqlString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlString.m; sourceTree = "<group>"; };
+		60EF81271F7F7A5D00E90329 /* testt2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testt2.h; sourceTree = "<group>"; };
+		60EF81281F7F7A5D00E90329 /* testt2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testt2.m; sourceTree = "<group>"; };
+		60EF81291F7F7A5D00E90329 /* Tiku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tiku.h; sourceTree = "<group>"; };
+		60EF812A1F7F7A5D00E90329 /* Tiku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tiku.m; sourceTree = "<group>"; };
+		60EF812B1F7F7A5D00E90329 /* VIPID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPID.h; sourceTree = "<group>"; };
+		60EF812C1F7F7A5D00E90329 /* VIPID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPID.m; sourceTree = "<group>"; };
+		60EF812D1F7F7A5D00E90329 /* XuanZeAndPanDuan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XuanZeAndPanDuan.h; sourceTree = "<group>"; };
+		60EF812E1F7F7A5D00E90329 /* XuanZeAndPanDuan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XuanZeAndPanDuan.m; sourceTree = "<group>"; };
+		60EF813D1F7F7AF000E90329 /* FFDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDatabase.h; sourceTree = "<group>"; };
+		60EF813E1F7F7AF000E90329 /* FFDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDatabase.m; sourceTree = "<group>"; };
+		60EF813F1F7F7AF000E90329 /* FFDBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDBObject.h; sourceTree = "<group>"; };
+		60EF81401F7F7AF000E90329 /* FFDBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDBObject.m; sourceTree = "<group>"; };
+		60EF81411F7F7AF000E90329 /* FMDatabase+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+Utils.h"; sourceTree = "<group>"; };
+		60EF81421F7F7AF000E90329 /* FMDatabase+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+Utils.m"; sourceTree = "<group>"; };
+		60EF81461F7F7CC800E90329 /* KeyVipCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyVipCategory.h; sourceTree = "<group>"; };
+		60EF81471F7F7CC800E90329 /* KeyVipCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyVipCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,12 +285,19 @@
 		3EDAC1681ECD985B0087CB6B /* QuestionTools */ = {
 			isa = PBXGroup;
 			children = (
+				60EF813C1F7F7AF000E90329 /* FFMDB */,
+				60EF81141F7F7A5D00E90329 /* Method */,
+				60EF80E71F7F7A3900E90329 /* Entity */,
+				60EF80E21F7F7A2900E90329 /* gtmbase64 */,
+				60EF80D21F7F7A1D00E90329 /* Utils */,
 				3EDAC18E1ECEA21F0087CB6B /* FMDB */,
 				3EDAC19E1ECEA21F0087CB6B /* FUCK */,
 				3EDAC1691ECD985B0087CB6B /* AppDelegate.h */,
 				3EDAC16A1ECD985B0087CB6B /* AppDelegate.m */,
 				3ED57C871ED6DB47002ABF07 /* NSDate+Utils.h */,
 				3ED57C881ED6DB47002ABF07 /* NSDate+Utils.m */,
+				60EF80CC1F7F793900E90329 /* OCProjectParse.h */,
+				60EF80CD1F7F793900E90329 /* OCProjectParse.m */,
 				3ED57C751ED6C3A9002ABF07 /* MouseButton.h */,
 				3ED57C761ED6C3A9002ABF07 /* MouseButton.m */,
 				3EC55EF11ECEE09800C9A5AF /* CommentWindow.h */,
@@ -189,9 +315,15 @@
 				3ED57C851ED6CC6D002ABF07 /* LogOutLineView.m */,
 				3EDAC16F1ECD985B0087CB6B /* ViewController.h */,
 				3EDAC1701ECD985B0087CB6B /* ViewController.m */,
+				60983F111F7E55A60002CAE4 /* QuestionCompareController.h */,
+				60983F121F7E55A60002CAE4 /* QuestionCompareController.m */,
+				60983F131F7E55A60002CAE4 /* QuestionCompareController.xib */,
 				3EC55EE51ECEC91100C9A5AF /* QuestionsEncryptionViewController.h */,
 				3EC55EE61ECEC91100C9A5AF /* QuestionsEncryptionViewController.m */,
 				3EC55EE71ECEC91100C9A5AF /* QuestionsEncryptionViewController.xib */,
+				60983F161F7E5F590002CAE4 /* ProjectFileCompareController.h */,
+				60983F171F7E5F590002CAE4 /* ProjectFileCompareController.m */,
+				60983F181F7E5F590002CAE4 /* ProjectFileCompareController.xib */,
 				3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */,
 				3EDAC1721ECD985B0087CB6B /* Assets.xcassets */,
 				3EDAC1771ECD985B0087CB6B /* Info.plist */,
@@ -270,6 +402,128 @@
 				3EDAC1A71ECEA21F0087CB6B /* question.db */,
 			);
 			path = FUCK;
+			sourceTree = "<group>";
+		};
+		60EF80D21F7F7A1D00E90329 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				60EF80D31F7F7A1D00E90329 /* FFJSONHelper.h */,
+				60EF80D41F7F7A1D00E90329 /* FFJSONHelper.m */,
+				60EF80D51F7F7A1D00E90329 /* FFOrderedDictionary.h */,
+				60EF80D61F7F7A1D00E90329 /* FFOrderedDictionary.m */,
+				60EF80D71F7F7A1D00E90329 /* NSArray+Utils.h */,
+				60EF80D81F7F7A1D00E90329 /* NSArray+Utils.m */,
+				60EF80D91F7F7A1D00E90329 /* NSDictionary+Utils.h */,
+				60EF80DA1F7F7A1D00E90329 /* NSDictionary+Utils.m */,
+				60EF80DB1F7F7A1D00E90329 /* RFJModel.h */,
+				60EF80DC1F7F7A1D00E90329 /* RFJModel.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		60EF80E21F7F7A2900E90329 /* gtmbase64 */ = {
+			isa = PBXGroup;
+			children = (
+				60EF80E31F7F7A2900E90329 /* GTMBase64.h */,
+				60EF80E41F7F7A2900E90329 /* GTMBase64.m */,
+				60EF80E51F7F7A2900E90329 /* GTMDefines.h */,
+			);
+			path = gtmbase64;
+			sourceTree = "<group>";
+		};
+		60EF80E71F7F7A3900E90329 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				60EF80E81F7F7A3900E90329 /* DBItem */,
+				60EF80F11F7F7A3900E90329 /* FFQuestionItem.h */,
+				60EF80F21F7F7A3900E90329 /* FFQuestionItem.m */,
+				60EF80F31F7F7A3900E90329 /* KJZ_DB.h */,
+				60EF80F41F7F7A3900E90329 /* KJZ_DB.m */,
+				60EF80F51F7F7A3900E90329 /* QuestionItem */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		60EF80E81F7F7A3900E90329 /* DBItem */ = {
+			isa = PBXGroup;
+			children = (
+				60EF80E91F7F7A3900E90329 /* Base_DB.h */,
+				60EF80EA1F7F7A3900E90329 /* Base_DB.m */,
+				60EF80EB1F7F7A3900E90329 /* JKBD_DB.h */,
+				60EF80EC1F7F7A3900E90329 /* JKBD_DB.m */,
+				60EF80ED1F7F7A3900E90329 /* JXYDT_DB.h */,
+				60EF80EE1F7F7A3900E90329 /* JXYDT_DB.m */,
+				60EF80EF1F7F7A3900E90329 /* YBJK_DB.h */,
+				60EF80F01F7F7A3900E90329 /* YBJK_DB.m */,
+			);
+			path = DBItem;
+			sourceTree = "<group>";
+		};
+		60EF80F51F7F7A3900E90329 /* QuestionItem */ = {
+			isa = PBXGroup;
+			children = (
+				60EF80F61F7F7A3900E90329 /* FFCXTCourseItem.h */,
+				60EF80F71F7F7A3900E90329 /* FFCXTCourseItem.m */,
+				60EF80F81F7F7A3900E90329 /* FFCXTQuestionItem.h */,
+				60EF80F91F7F7A3900E90329 /* FFCXTQuestionItem.m */,
+				60EF80FA1F7F7A3900E90329 /* FFJKBDQuestionItem.h */,
+				60EF80FB1F7F7A3900E90329 /* FFJKBDQuestionItem.m */,
+				60EF80FC1F7F7A3900E90329 /* FFJKCRQuestionItem.h */,
+				60EF80FD1F7F7A3900E90329 /* FFJKCRQuestionItem.m */,
+				60EF80FE1F7F7A3900E90329 /* FFJXYDTQuestionItem.h */,
+				60EF80FF1F7F7A3900E90329 /* FFJXYDTQuestionItem.m */,
+				60EF81001F7F7A3900E90329 /* FFXCBDQuestionItem.h */,
+				60EF81011F7F7A3900E90329 /* FFXCBDQuestionItem.m */,
+				60EF81021F7F7A3900E90329 /* FFYBJKQuestionItem.h */,
+				60EF81031F7F7A3900E90329 /* FFYBJKQuestionItem.m */,
+			);
+			path = QuestionItem;
+			sourceTree = "<group>";
+		};
+		60EF81141F7F7A5D00E90329 /* Method */ = {
+			isa = PBXGroup;
+			children = (
+				60EF81461F7F7CC800E90329 /* KeyVipCategory.h */,
+				60EF81471F7F7CC800E90329 /* KeyVipCategory.m */,
+				60EF81151F7F7A5D00E90329 /* KJZChapter.h */,
+				60EF81161F7F7A5D00E90329 /* KJZChapter.m */,
+				60EF81171F7F7A5D00E90329 /* KJZNocomment.h */,
+				60EF81181F7F7A5D00E90329 /* KJZNocomment.m */,
+				60EF81191F7F7A5D00E90329 /* KJZSameAnswer.h */,
+				60EF811A1F7F7A5D00E90329 /* KJZSameAnswer.m */,
+				60EF811B1F7F7A5D00E90329 /* KJZSameComment.h */,
+				60EF811C1F7F7A5D00E90329 /* KJZSameComment.m */,
+				60EF811D1F7F7A5D00E90329 /* KJZSubjects.h */,
+				60EF811E1F7F7A5D00E90329 /* KJZSubjects.m */,
+				60EF811F1F7F7A5D00E90329 /* KJZVIPSameExamPoint.h */,
+				60EF81201F7F7A5D00E90329 /* KJZVIPSameExamPoint.m */,
+				60EF81211F7F7A5D00E90329 /* MethodObject.h */,
+				60EF81221F7F7A5D00E90329 /* MethodObject.m */,
+				60EF81251F7F7A5D00E90329 /* SqlString.h */,
+				60EF81261F7F7A5D00E90329 /* SqlString.m */,
+				60EF81271F7F7A5D00E90329 /* testt2.h */,
+				60EF81281F7F7A5D00E90329 /* testt2.m */,
+				60EF81291F7F7A5D00E90329 /* Tiku.h */,
+				60EF812A1F7F7A5D00E90329 /* Tiku.m */,
+				60EF812B1F7F7A5D00E90329 /* VIPID.h */,
+				60EF812C1F7F7A5D00E90329 /* VIPID.m */,
+				60EF812D1F7F7A5D00E90329 /* XuanZeAndPanDuan.h */,
+				60EF812E1F7F7A5D00E90329 /* XuanZeAndPanDuan.m */,
+			);
+			path = Method;
+			sourceTree = "<group>";
+		};
+		60EF813C1F7F7AF000E90329 /* FFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				60EF813D1F7F7AF000E90329 /* FFDatabase.h */,
+				60EF813E1F7F7AF000E90329 /* FFDatabase.m */,
+				60EF813F1F7F7AF000E90329 /* FFDBObject.h */,
+				60EF81401F7F7AF000E90329 /* FFDBObject.m */,
+				60EF81411F7F7AF000E90329 /* FMDatabase+Utils.h */,
+				60EF81421F7F7AF000E90329 /* FMDatabase+Utils.m */,
+			);
+			path = FFMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +610,7 @@
 			files = (
 				3EDAC1A81ECEA21F0087CB6B /* LICENSE.txt in Resources */,
 				3E73EE9C1ED2B9D900E01A96 /* NSLogCell.xib in Resources */,
+				60983F1A1F7E5F590002CAE4 /* ProjectFileCompareController.xib in Resources */,
 				3EDAC1731ECD985B0087CB6B /* Assets.xcassets in Resources */,
 				3EDAC1B31ECEA21F0087CB6B /* question.db in Resources */,
 				3ED57C821ED6CBD4002ABF07 /* pop btn top highlight.png in Resources */,
@@ -364,6 +619,7 @@
 				3ED57C711ED6C2BA002ABF07 /* LogCellPopView.xib in Resources */,
 				3E0E7B3D1ECEC63B00642B8B /* Main.storyboard in Resources */,
 				3ED57C7E1ED6CBD4002ABF07 /* pop btn bottom highlight.png in Resources */,
+				60983F151F7E55A60002CAE4 /* QuestionCompareController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,25 +638,63 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ED57C701ED6C2BA002ABF07 /* LogCellPopView.m in Sources */,
+				60EF81061F7F7A3900E90329 /* JXYDT_DB.m in Sources */,
+				60EF81101F7F7A3900E90329 /* FFYBJKQuestionItem.m in Sources */,
 				3EDAC1AF1ECEA21F0087CB6B /* aes.c in Sources */,
+				60EF813B1F7F7A5D00E90329 /* XuanZeAndPanDuan.m in Sources */,
+				60EF81451F7F7AF000E90329 /* FMDatabase+Utils.m in Sources */,
 				3EDAC1711ECD985B0087CB6B /* ViewController.m in Sources */,
+				60EF81091F7F7A3900E90329 /* KJZ_DB.m in Sources */,
+				60EF81481F7F7CC800E90329 /* KeyVipCategory.m in Sources */,
+				60EF81341F7F7A5D00E90329 /* KJZVIPSameExamPoint.m in Sources */,
 				3EDAC1B11ECEA21F0087CB6B /* fuckme.c in Sources */,
+				60EF81041F7F7A3900E90329 /* Base_DB.m in Sources */,
 				3EC55EF31ECEE09800C9A5AF /* CommentWindow.m in Sources */,
+				60EF80DD1F7F7A1D00E90329 /* FFJSONHelper.m in Sources */,
 				3EC55EF71ECEEB9C00C9A5AF /* LogViewController.m in Sources */,
+				60EF81051F7F7A3900E90329 /* JKBD_DB.m in Sources */,
+				60EF810E1F7F7A3900E90329 /* FFJXYDTQuestionItem.m in Sources */,
+				60EF81331F7F7A5D00E90329 /* KJZSubjects.m in Sources */,
 				3EDAC1B01ECEA21F0087CB6B /* fuck_wrapper.m in Sources */,
+				60EF810A1F7F7A3900E90329 /* FFCXTCourseItem.m in Sources */,
 				3ED57C891ED6DB47002ABF07 /* NSDate+Utils.m in Sources */,
 				3EDAC1A91ECEA21F0087CB6B /* README.markdown in Sources */,
 				3ED57C861ED6CC6D002ABF07 /* LogOutLineView.m in Sources */,
 				3EDAC16E1ECD985B0087CB6B /* main.m in Sources */,
+				60983F141F7E55A60002CAE4 /* QuestionCompareController.m in Sources */,
 				3EDAC1AA1ECEA21F0087CB6B /* FMDatabase.m in Sources */,
+				60EF81071F7F7A3900E90329 /* YBJK_DB.m in Sources */,
+				60EF81381F7F7A5D00E90329 /* testt2.m in Sources */,
+				60EF81351F7F7A5D00E90329 /* MethodObject.m in Sources */,
+				60EF81301F7F7A5D00E90329 /* KJZNocomment.m in Sources */,
 				3EDAC1AE1ECEA21F0087CB6B /* FMResultSet.m in Sources */,
+				60EF81391F7F7A5D00E90329 /* Tiku.m in Sources */,
 				3EDAC16B1ECD985B0087CB6B /* AppDelegate.m in Sources */,
+				60EF80E01F7F7A1D00E90329 /* NSDictionary+Utils.m in Sources */,
+				60EF81441F7F7AF000E90329 /* FFDBObject.m in Sources */,
+				60EF81431F7F7AF000E90329 /* FFDatabase.m in Sources */,
+				60EF81321F7F7A5D00E90329 /* KJZSameComment.m in Sources */,
+				60EF80E61F7F7A2900E90329 /* GTMBase64.m in Sources */,
+				60EF80CE1F7F793900E90329 /* OCProjectParse.m in Sources */,
+				60EF813A1F7F7A5D00E90329 /* VIPID.m in Sources */,
 				3EDAC1AC1ECEA21F0087CB6B /* FMDatabasePool.m in Sources */,
+				60983F191F7E5F590002CAE4 /* ProjectFileCompareController.m in Sources */,
+				60EF81311F7F7A5D00E90329 /* KJZSameAnswer.m in Sources */,
+				60EF81081F7F7A3900E90329 /* FFQuestionItem.m in Sources */,
+				60EF810C1F7F7A3900E90329 /* FFJKBDQuestionItem.m in Sources */,
 				3EDAC1AB1ECEA21F0087CB6B /* FMDatabaseAdditions.m in Sources */,
+				60EF80E11F7F7A1D00E90329 /* RFJModel.m in Sources */,
 				3EC55EE81ECEC91100C9A5AF /* QuestionsEncryptionViewController.m in Sources */,
+				60EF81371F7F7A5D00E90329 /* SqlString.m in Sources */,
+				60EF810B1F7F7A3900E90329 /* FFCXTQuestionItem.m in Sources */,
 				3EDAC1B21ECEA21F0087CB6B /* hexstring.c in Sources */,
+				60EF810F1F7F7A3900E90329 /* FFXCBDQuestionItem.m in Sources */,
+				60EF812F1F7F7A5D00E90329 /* KJZChapter.m in Sources */,
 				3ED57C771ED6C3A9002ABF07 /* MouseButton.m in Sources */,
+				60EF80DE1F7F7A1D00E90329 /* FFOrderedDictionary.m in Sources */,
 				3EDAC1AD1ECEA21F0087CB6B /* FMDatabaseQueue.m in Sources */,
+				60EF810D1F7F7A3900E90329 /* FFJKCRQuestionItem.m in Sources */,
+				60EF80DF1F7F7A1D00E90329 /* NSArray+Utils.m in Sources */,
 				3E73EE9B1ED2B9D900E01A96 /* NSLogCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

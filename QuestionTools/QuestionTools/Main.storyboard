@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -452,327 +453,61 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="P8z-Rx-ZLY">
-                        <rect key="frame" x="0.0" y="0.0" width="580" height="390"/>
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="345"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-fU-HZn">
-                                <rect key="frame" x="18" y="138" width="69" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="考驾照题库" id="vUz-0N-eHA">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="2AE-NG-vDq">
-                                <rect key="frame" x="101" y="343" width="74" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="驾考宝典" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2Qo-fD-YaR">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="chooseJinPinAction:" target="XfG-lQ-9wD" id="hCo-LK-J9b"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="vMd-Sm-xSQ">
-                                <rect key="frame" x="246" y="342" width="87" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="驾校一点通" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="t7S-7S-AQ5">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="chooseJinPinAction:" target="XfG-lQ-9wD" id="5el-TM-UTt"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="Tuy-lN-xzF">
-                                <rect key="frame" x="405" y="342" width="74" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="元贝驾考" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="A8A-V3-5cj">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="chooseJinPinAction:" target="XfG-lQ-9wD" id="0nz-bN-3Rh"/>
-                                </connections>
-                            </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bu6-6C-SRV">
-                                <rect key="frame" x="102" y="262" width="165" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="拖入新的竞品题库路径" drawsBackground="YES" id="OeU-Bf-8r3">
-                                    <font key="font" metaFont="system" size="15"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bd-fA-U4S">
-                                <rect key="frame" x="18" y="273" width="64" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="竞品题库" id="TRu-bG-ynr">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfq-f1-ld0">
-                                <rect key="frame" x="18" y="343" width="56" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="竞品选择" id="yID-uw-v4U">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEA-p9-8uk">
-                                <rect key="frame" x="276" y="178" width="149" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="justified" title="路径" placeholderString="路径" id="O5f-Xd-IOB">
-                                    <font key="font" metaFont="smallSystem"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lpa-bs-3om">
-                                <rect key="frame" x="100" y="178" width="149" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="justified" title="路径" placeholderString="路径" id="VwG-Op-XSM">
-                                    <font key="font" metaFont="smallSystem"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-Up-73J">
-                                <rect key="frame" x="100" y="60" width="345" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="justified" title="路径" placeholderString="路径" id="RHQ-D8-fFh">
-                                    <font key="font" metaFont="smallSystem"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jp5-av-Bvg">
-                                <rect key="frame" x="102" y="123" width="341" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="拖入考驾照的题库路径" drawsBackground="YES" id="0sA-IG-EEn">
-                                    <font key="font" metaFont="system" size="15"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="UV9-9C-3jx">
-                                <rect key="frame" x="96" y="12" width="123" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="比对自身" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3qY-5b-Ea8">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-Lg-LGg">
+                                <rect key="frame" x="152" y="226" width="112" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="gbO-S9-dph"/>
+                                    <constraint firstAttribute="height" constant="40" id="mVh-Ku-ad8"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="题库对比" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aRx-KX-T74">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="compareAction:" target="XfG-lQ-9wD" id="TdZ-ws-zbf"/>
+                                    <action selector="compareQuestion:" target="XfG-lQ-9wD" id="7Im-N4-0ed"/>
                                 </connections>
                             </button>
-                            <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="tDH-NF-yPZ">
-                                <rect key="frame" x="457" y="153" width="49" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="科一" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="GhA-WX-4of">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="chooseCourseAction:" target="XfG-lQ-9wD" id="kEf-gw-6a2"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-e8-kLa">
-                                <rect key="frame" x="457" y="122" width="49" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="科四" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="JEU-UZ-jfM">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="chooseCourseAction:" target="XfG-lQ-9wD" id="khY-Ve-oJ1"/>
-                                </connections>
-                            </button>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khh-VS-ZDu">
-                                <rect key="frame" x="456" y="83" width="76" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="wye-t2-WCv" id="MAm-0G-DX3">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="Iz6-ab-IMB">
-                                        <items>
-                                            <menuItem title="Item 1" state="on" id="wye-t2-WCv"/>
-                                            <menuItem title="Item 2" id="00q-HV-o6N"/>
-                                            <menuItem title="Item 3" id="YbS-Jc-Umq"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                            </popUpButton>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XvV-pf-OVg">
-                                <rect key="frame" x="278" y="262" width="165" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="拖入旧的竞品题库路径" drawsBackground="YES" id="GBL-nJ-paF">
-                                    <font key="font" metaFont="system" size="15"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXV-vO-UeY">
-                                <rect key="frame" x="456" y="296" width="96" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="自动识别" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gnD-TD-T2W">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="autoReadAction:" target="XfG-lQ-9wD" id="Zh1-tG-B6S"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="GRF-KS-8tM">
-                                <rect key="frame" x="344" y="12" width="105" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="比对考驾照" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2I6-mq-0a1">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pKQ-ZR-ARb">
+                                <rect key="frame" x="152" y="146" width="112" height="51"/>
+                                <buttonCell key="cell" type="push" title="题库加解密" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zFQ-0a-BQ9">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="compareAction:" target="XfG-lQ-9wD" id="ShO-gS-myo"/>
+                                    <action selector="encodeQuestionDB:" target="XfG-lQ-9wD" id="0fW-8p-z9p"/>
                                 </connections>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-Iz-IXL">
-                                <rect key="frame" x="456" y="260" width="103" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="是否CL_DB" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="4En-wa-shx">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="isCL_DBAction:" target="XfG-lQ-9wD" id="u6f-eh-5Lg"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-sd-L8q">
-                                <rect key="frame" x="493" y="21" width="74" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="生成文件" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="iPl-5f-8lU">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zse-l1-MBz">
+                                <rect key="frame" x="152" y="66" width="112" height="51"/>
+                                <buttonCell key="cell" type="push" title="工程文件对比" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tjk-kA-3iP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="isCreateFileAction:" target="XfG-lQ-9wD" id="9id-K0-LYu"/>
+                                    <action selector="compareProjectFile:" target="XfG-lQ-9wD" id="APr-gU-Hua"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="pKQ-ZR-ARb" firstAttribute="centerY" secondItem="P8z-Rx-ZLY" secondAttribute="centerY" id="5ku-RI-hQL"/>
+                            <constraint firstItem="W7S-Lg-LGg" firstAttribute="centerX" secondItem="P8z-Rx-ZLY" secondAttribute="centerX" id="AgG-Pb-2OG"/>
+                            <constraint firstItem="zse-l1-MBz" firstAttribute="width" secondItem="W7S-Lg-LGg" secondAttribute="width" id="Drn-sy-tHI"/>
+                            <constraint firstItem="zse-l1-MBz" firstAttribute="centerX" secondItem="W7S-Lg-LGg" secondAttribute="centerX" id="FnJ-0p-so5"/>
+                            <constraint firstItem="zse-l1-MBz" firstAttribute="top" secondItem="pKQ-ZR-ARb" secondAttribute="bottom" constant="40" id="NVg-yn-jQ0"/>
+                            <constraint firstItem="pKQ-ZR-ARb" firstAttribute="height" secondItem="W7S-Lg-LGg" secondAttribute="height" id="Qf4-8c-Vid"/>
+                            <constraint firstItem="pKQ-ZR-ARb" firstAttribute="width" secondItem="W7S-Lg-LGg" secondAttribute="width" id="RrN-rg-Pi7"/>
+                            <constraint firstItem="zse-l1-MBz" firstAttribute="height" secondItem="W7S-Lg-LGg" secondAttribute="height" id="XoT-Ha-VqB"/>
+                            <constraint firstItem="pKQ-ZR-ARb" firstAttribute="centerX" secondItem="W7S-Lg-LGg" secondAttribute="centerX" id="cqX-dj-iqk"/>
+                            <constraint firstItem="pKQ-ZR-ARb" firstAttribute="top" secondItem="W7S-Lg-LGg" secondAttribute="bottom" constant="40" id="mOE-5X-OXt"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="_autoReadBtn" destination="AXV-vO-UeY" id="eND-a0-np2"/>
-                        <outlet property="_certTypeBtn" destination="khh-VS-ZDu" id="4Ti-mU-2OC"/>
-                        <outlet property="_compareSelfBtn" destination="UV9-9C-3jx" id="PeN-uJ-T5P"/>
-                        <outlet property="_comparseSelf" destination="GRF-KS-8tM" id="IHC-VG-Gwq"/>
-                        <outlet property="_createFileBtn" destination="3jT-sd-L8q" id="Ujk-xc-ziV"/>
-                        <outlet property="_isCL_DBBtn" destination="vlV-Iz-IXL" id="Z8H-e9-3w9"/>
-                        <outlet property="_jiakaoBtn" destination="2AE-NG-vDq" id="l3i-oJ-aeq"/>
-                        <outlet property="_jingpPinNewPathTextField" destination="Bu6-6C-SRV" id="z7N-Dz-J5d"/>
-                        <outlet property="_jingpPinOldPathTextField" destination="XvV-pf-OVg" id="V2k-Dd-fOa"/>
-                        <outlet property="_jingpinNewFullPathLabel" destination="Lpa-bs-3om" id="67T-yT-gKl"/>
-                        <outlet property="_jingpinOldFullPathLabel" destination="UEA-p9-8uk" id="EkQ-SQ-Pae"/>
-                        <outlet property="_kemu1Btn" destination="tDH-NF-yPZ" id="U3R-c1-0d6"/>
-                        <outlet property="_kemu4Btn" destination="xr2-e8-kLa" id="wcG-5u-Q0v"/>
-                        <outlet property="_kjzFullPathLabel" destination="rDa-Up-73J" id="Nmc-yf-O0T"/>
-                        <outlet property="_kjzPathTextField" destination="jp5-av-Bvg" id="OgM-zU-NN7"/>
-                        <outlet property="_yidiantongBtn" destination="vMd-Sm-xSQ" id="Iaq-fK-UhM"/>
-                        <outlet property="_yuanbeiBtn" destination="Tuy-lN-xzF" id="dtd-xu-SCp"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="632"/>
-        </scene>
-        <!--Questions Encryption Controll-->
-        <scene sceneID="lP5-Kh-3Kb">
-            <objects>
-                <viewController storyboardIdentifier="QuestionsEncryptionControll" id="Lcr-FE-Xbm" customClass="QuestionsEncryptionControll" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="TzG-ZY-gKv">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="100"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34a-i9-VUM">
-                                <rect key="frame" x="26" y="71" width="84" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="db文件路径" id="ykW-hh-KLr">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-AC-xKs">
-                                <rect key="frame" x="20" y="34" width="351" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="将文件拖拽到此处" drawsBackground="YES" id="95e-w0-Dc1">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Far-ky-os6">
-                                <rect key="frame" x="196" y="63" width="48" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="加密" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="CaR-wZ-ADa">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="eAction:" target="Lcr-FE-Xbm" id="sgW-qJ-ZWo"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="et5-Cq-h6G">
-                                <rect key="frame" x="310" y="71" width="48" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="解密" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Lk3-JQ-1Rw">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="dAction:" target="Lcr-FE-Xbm" id="ZNO-wH-czY"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9N-Bk-CLk">
-                                <rect key="frame" x="379" y="30" width="98" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="开始" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3nK-SM-JlQ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="makeAvtion:" target="Lcr-FE-Xbm" id="oWk-P4-MF0"/>
-                                </connections>
-                            </button>
-                            <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="1" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="cvq-O5-tzm">
-                                <rect key="frame" x="20" y="7" width="351" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </progressIndicator>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3TG-Ja-7Yb">
-                                <rect key="frame" x="18" y="9" width="455" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="qnw-XK-jho">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="barProgress" destination="cvq-O5-tzm" id="piD-KK-K9P"/>
-                        <outlet property="dBtn" destination="et5-Cq-h6G" id="idl-8d-6Oc"/>
-                        <outlet property="eBtn" destination="Far-ky-os6" id="zmd-Je-94a"/>
-                        <outlet property="makeBtn" destination="a9N-Bk-CLk" id="LMR-0A-esQ"/>
-                        <outlet property="resultLb" destination="3TG-Ja-7Yb" id="ysy-BA-rl0"/>
-                        <outlet property="textInput" destination="ZVo-AC-xKs" id="g5V-jc-ym5"/>
-                    </connections>
-                </viewController>
-                <customObject id="uHG-ni-UoG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="154" y="1189"/>
+            <point key="canvasLocation" x="231" y="711"/>
         </scene>
     </scenes>
 </document>

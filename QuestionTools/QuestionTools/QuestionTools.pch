@@ -11,6 +11,15 @@
 
 #ifdef __OBJC__
 #import "AppDelegate.h"
+
+#import "MethodObject.h"
+#import "FFJSONHelper.h"
+#import "FFDatabase.h"
+#import "NSArray+Utils.h"
+#import "FFQuestionItem.h"
+#import "FFJSONHelper.h"
+#import "GTMBase64.h"
+
 #endif
 
 #ifndef __OPTIMIZE__
