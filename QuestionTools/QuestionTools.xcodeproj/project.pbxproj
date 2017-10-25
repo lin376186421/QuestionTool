@@ -45,6 +45,8 @@
 		60983F151F7E55A60002CAE4 /* QuestionCompareController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60983F131F7E55A60002CAE4 /* QuestionCompareController.xib */; };
 		60983F191F7E5F590002CAE4 /* ProjectFileCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983F171F7E5F590002CAE4 /* ProjectFileCompareController.m */; };
 		60983F1A1F7E5F590002CAE4 /* ProjectFileCompareController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60983F181F7E5F590002CAE4 /* ProjectFileCompareController.xib */; };
+		60B72E2B1F94844C008CFA06 /* PlistFileExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B72E291F94844C008CFA06 /* PlistFileExchangeController.m */; };
+		60B72E2C1F94844C008CFA06 /* PlistFileExchangeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B72E2A1F94844C008CFA06 /* PlistFileExchangeController.xib */; };
 		60EF80CE1F7F793900E90329 /* OCProjectParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80CD1F7F793900E90329 /* OCProjectParse.m */; };
 		60EF80DD1F7F7A1D00E90329 /* FFJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80D41F7F7A1D00E90329 /* FFJSONHelper.m */; };
 		60EF80DE1F7F7A1D00E90329 /* FFOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF80D61F7F7A1D00E90329 /* FFOrderedDictionary.m */; };
@@ -159,6 +161,9 @@
 		60983F161F7E5F590002CAE4 /* ProjectFileCompareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectFileCompareController.h; sourceTree = "<group>"; };
 		60983F171F7E5F590002CAE4 /* ProjectFileCompareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectFileCompareController.m; sourceTree = "<group>"; };
 		60983F181F7E5F590002CAE4 /* ProjectFileCompareController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectFileCompareController.xib; sourceTree = "<group>"; };
+		60B72E281F94844C008CFA06 /* PlistFileExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistFileExchangeController.h; sourceTree = "<group>"; };
+		60B72E291F94844C008CFA06 /* PlistFileExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistFileExchangeController.m; sourceTree = "<group>"; };
+		60B72E2A1F94844C008CFA06 /* PlistFileExchangeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlistFileExchangeController.xib; sourceTree = "<group>"; };
 		60EF80CC1F7F793900E90329 /* OCProjectParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCProjectParse.h; sourceTree = "<group>"; };
 		60EF80CD1F7F793900E90329 /* OCProjectParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCProjectParse.m; sourceTree = "<group>"; };
 		60EF80D31F7F7A1D00E90329 /* FFJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFJSONHelper.h; sourceTree = "<group>"; };
@@ -324,6 +329,9 @@
 				60983F161F7E5F590002CAE4 /* ProjectFileCompareController.h */,
 				60983F171F7E5F590002CAE4 /* ProjectFileCompareController.m */,
 				60983F181F7E5F590002CAE4 /* ProjectFileCompareController.xib */,
+				60B72E281F94844C008CFA06 /* PlistFileExchangeController.h */,
+				60B72E291F94844C008CFA06 /* PlistFileExchangeController.m */,
+				60B72E2A1F94844C008CFA06 /* PlistFileExchangeController.xib */,
 				3E0E7B3C1ECEC63B00642B8B /* Main.storyboard */,
 				3EDAC1721ECD985B0087CB6B /* Assets.xcassets */,
 				3EDAC1771ECD985B0087CB6B /* Info.plist */,
@@ -614,6 +622,7 @@
 				3EDAC1731ECD985B0087CB6B /* Assets.xcassets in Resources */,
 				3EDAC1B31ECEA21F0087CB6B /* question.db in Resources */,
 				3ED57C821ED6CBD4002ABF07 /* pop btn top highlight.png in Resources */,
+				60B72E2C1F94844C008CFA06 /* PlistFileExchangeController.xib in Resources */,
 				3EC55EF81ECEEB9C00C9A5AF /* LogViewController.xib in Resources */,
 				3EC55EE91ECEC91100C9A5AF /* QuestionsEncryptionViewController.xib in Resources */,
 				3ED57C711ED6C2BA002ABF07 /* LogCellPopView.xib in Resources */,
@@ -696,6 +705,7 @@
 				60EF810D1F7F7A3900E90329 /* FFJKCRQuestionItem.m in Sources */,
 				60EF80DF1F7F7A1D00E90329 /* NSArray+Utils.m in Sources */,
 				3E73EE9B1ED2B9D900E01A96 /* NSLogCell.m in Sources */,
+				60B72E2B1F94844C008CFA06 /* PlistFileExchangeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

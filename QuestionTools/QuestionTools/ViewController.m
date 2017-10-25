@@ -10,11 +10,15 @@
 #import "QuestionsEncryptionViewController.h"
 #import "QuestionCompareController.h"
 #import "ProjectFileCompareController.h"
+#import "PlistFileExchangeController.h"
+
 
 @interface ViewController()
 {
-    
-    
+    QuestionCompareController *_qcVC;
+    QuestionsEncryptionViewController *_qeVC;
+    ProjectFileCompareController *_pfcVC;
+    PlistFileExchangeController *_pfeVC;
 }
 @end
 
@@ -27,22 +31,43 @@
 
 - (void)showWindow:(NSWindowController *)windowVC
 {
+    NSRect rect = windowVC.window.frame;
+    NSRect windowFrame = [NSApplication sharedApplication].keyWindow.frame;
+    rect.origin.x = windowFrame.origin.x + windowFrame.size.width + 10;
+    rect.origin.y = windowFrame.origin.y + windowFrame.size.height/2 - rect.size.height/2;
+    [windowVC.window setFrame:rect display:YES];
     [[NSApplication sharedApplication].keyWindow addChildWindow:windowVC.window ordered:NSWindowAbove];
 }
 
 - (IBAction)compareQuestion:(id)sender {
-    QuestionCompareController *windowVC = [[QuestionCompareController alloc] initWithWindowNibName:@"QuestionCompareController"];
-    [self showWindow:windowVC];
+    if (_qcVC==nil) {
+        QuestionCompareController *windowVC = [[QuestionCompareController alloc] initWithWindowNibName:@"QuestionCompareController"];
+        _qcVC = windowVC;
+    }
+    [self showWindow:_qcVC];
 }
 
 - (IBAction)encodeQuestionDB:(id)sender {
-    QuestionsEncryptionViewController *windowVC = [[QuestionsEncryptionViewController alloc] initWithWindowNibName:@"QuestionsEncryptionViewController"];
-    [self showWindow:windowVC];
+    if (_qeVC==nil) {
+        QuestionsEncryptionViewController *windowVC = [[QuestionsEncryptionViewController alloc] initWithWindowNibName:@"QuestionsEncryptionViewController"];
+        _qeVC = windowVC;
+    }
+    [self showWindow:_qeVC];
 }
 
 - (IBAction)compareProjectFile:(id)sender {
-    ProjectFileCompareController *windowVC = [[ProjectFileCompareController alloc] initWithWindowNibName:@"ProjectFileCompareController"];
-    [self showWindow:windowVC];
+    if (_pfcVC == nil) {
+        ProjectFileCompareController *windowVC = [[ProjectFileCompareController alloc] initWithWindowNibName:@"ProjectFileCompareController"];
+        _pfcVC = windowVC;
+    }
+    [self showWindow:_pfcVC];
+}
+
+- (IBAction)PlistFileExchange:(id)sender {
+    if (!_pfeVC) {
+        _pfeVC = [[PlistFileExchangeController alloc] initWithWindowNibName:@"PlistFileExchangeController"];
+    }
+    [self showWindow:_pfeVC];
 }
 
 //- (void)courseBtnAction:(NSNotification *)n
@@ -102,7 +127,6 @@
 //        default:
 //            break;
 //    }
-//>>>>>>> 921af7d77af1656033fb8b9f313dbd8d7944216c
 //}
 
 @end

@@ -10,6 +10,10 @@
 
 @interface OCProjectParse : NSObject
 
++ (BOOL)isValidProjectPath:(NSString *)path;
+
++ (NSArray *)targetsFromProjectPath:(NSString *)path;
+
 + (NSString *)parseProjectWithPath:(NSString *)path targetName:(NSString *)targetName1 andTargetName:(NSString *)targetName2;
 
 @end

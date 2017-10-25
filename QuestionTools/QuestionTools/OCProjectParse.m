@@ -10,21 +10,38 @@
 
 @implementation OCProjectParse
 
++ (BOOL)isValidProjectPath:(NSString *)path
+{
+    if (path && [path hasSuffix:@".xcodeproj"]) {
+        return YES;
+    }
+    return NO;
+}
+
 + (NSString *)parseProjectWithPath:(NSString *)path targetName:(NSString *)targetName1 andTargetName:(NSString *)targetName2
 {
-//   NSString *path = @"/Users/wangcheng/Desktop/Test/ProjectHelper/ProjectHelper.xcodeproj/project.pbxproj";
-    
-//    NSString *path = @"/Users/wangcheng/Desktop/Test/ProjectHelper/ProjectHelper.xcodeproj";
-//    path = @"/Users/wangcheng/Desktop/交接内容/333/333.xcodeproj";
-//    path = @"/Users/wangcheng/Documents/Git/chelun/DrivingTest/DrivingTest.xcodeproj";
-    NSString *realpath = [path stringByAppendingPathComponent:@"project.pbxproj"];
-    
-    NSString *txt = readTxtFromPath(realpath);
-    
-//    NSString *name = [[path pathComponents] objectAtIndex:[path pathComponents].count - 3];
-//    writeTxtWithFileName(txt, name);
-    
-    return [self foundDiffFileWithTarget:targetName1 andTarget:targetName2 fromText:txt];
+//   NSString *path = @"/Users/wangcheng/Documents/Git/chelun/DrivingTest/DrivingTest.xcodeproj";
+    if ([self isValidProjectPath:path]) {
+        NSString *realpath = [path stringByAppendingPathComponent:@"project.pbxproj"];
+        
+        NSString *txt = readTxtFromPath(realpath);
+        
+        return [self foundDiffFileWithTarget:targetName1 andTarget:targetName2 fromText:txt];
+    }
+    return @"path路径下不是一个工程文件";
+}
+
++ (NSArray *)targetsFromProjectPath:(NSString *)path
+{
+    if ([self isValidProjectPath:path]) {
+        NSString *realpath = [path stringByAppendingPathComponent:@"project.pbxproj"];
+        
+        NSString *txt = readTxtFromPath(realpath);
+        
+        NSDictionary *targets = [self targetsFromtext:txt];
+        return [targets allKeys];
+    }
+    return nil;
 }
 
 + (NSString *)nameWithType:(NSInteger)type

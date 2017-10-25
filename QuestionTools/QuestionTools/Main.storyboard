@@ -437,7 +437,7 @@
                     <window key="window" title="题库工具" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="580" height="390"/>
+                        <rect key="contentRect" x="931" y="509" width="580" height="390"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
                     </window>
                     <connections>
@@ -446,18 +446,18 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="182"/>
+            <point key="canvasLocation" x="-203" y="199"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="P8z-Rx-ZLY">
-                        <rect key="frame" x="0.0" y="0.0" width="416" height="345"/>
+                        <rect key="frame" x="0.0" y="0.0" width="386" height="365"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-Lg-LGg">
-                                <rect key="frame" x="152" y="226" width="112" height="51"/>
+                                <rect key="frame" x="137" y="236" width="112" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gbO-S9-dph"/>
                                     <constraint firstAttribute="height" constant="40" id="mVh-Ku-ad8"/>
@@ -471,7 +471,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pKQ-ZR-ARb">
-                                <rect key="frame" x="152" y="146" width="112" height="51"/>
+                                <rect key="frame" x="137" y="156" width="112" height="51"/>
                                 <buttonCell key="cell" type="push" title="题库加解密" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zFQ-0a-BQ9">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -481,7 +481,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zse-l1-MBz">
-                                <rect key="frame" x="152" y="66" width="112" height="51"/>
+                                <rect key="frame" x="137" y="76" width="112" height="51"/>
                                 <buttonCell key="cell" type="push" title="工程文件对比" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tjk-kA-3iP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -490,8 +490,19 @@
                                     <action selector="compareProjectFile:" target="XfG-lQ-9wD" id="APr-gU-Hua"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HRW-De-lSB">
+                                <rect key="frame" x="137" y="13" width="112" height="51"/>
+                                <buttonCell key="cell" type="push" title="Plist文件转换" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yqd-xw-CeX">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="PlistFileExchange:" target="XfG-lQ-9wD" id="e3Z-CV-zFb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="HRW-De-lSB" firstAttribute="width" secondItem="zse-l1-MBz" secondAttribute="width" id="3f6-pc-5W4"/>
                             <constraint firstItem="pKQ-ZR-ARb" firstAttribute="centerY" secondItem="P8z-Rx-ZLY" secondAttribute="centerY" id="5ku-RI-hQL"/>
                             <constraint firstItem="W7S-Lg-LGg" firstAttribute="centerX" secondItem="P8z-Rx-ZLY" secondAttribute="centerX" id="AgG-Pb-2OG"/>
                             <constraint firstItem="zse-l1-MBz" firstAttribute="width" secondItem="W7S-Lg-LGg" secondAttribute="width" id="Drn-sy-tHI"/>
@@ -501,13 +512,14 @@
                             <constraint firstItem="pKQ-ZR-ARb" firstAttribute="width" secondItem="W7S-Lg-LGg" secondAttribute="width" id="RrN-rg-Pi7"/>
                             <constraint firstItem="zse-l1-MBz" firstAttribute="height" secondItem="W7S-Lg-LGg" secondAttribute="height" id="XoT-Ha-VqB"/>
                             <constraint firstItem="pKQ-ZR-ARb" firstAttribute="centerX" secondItem="W7S-Lg-LGg" secondAttribute="centerX" id="cqX-dj-iqk"/>
+                            <constraint firstItem="HRW-De-lSB" firstAttribute="height" secondItem="zse-l1-MBz" secondAttribute="height" id="jo9-Up-agg"/>
                             <constraint firstItem="pKQ-ZR-ARb" firstAttribute="top" secondItem="W7S-Lg-LGg" secondAttribute="bottom" constant="40" id="mOE-5X-OXt"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231" y="711"/>
+            <point key="canvasLocation" x="-203" y="829.5"/>
         </scene>
     </scenes>
 </document>
