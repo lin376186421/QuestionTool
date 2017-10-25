@@ -41,6 +41,13 @@
 
 @implementation QuestionCompareController
 
+- (void)windowWillClose:(NSNotification *)notification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    //    [App_Delegate setQuestionsEncryptionWindowController:nil];
+    [NSApp stopModalWithCode:0];
+}
+
 - (void)windowDidLoad {
     [super windowDidLoad];
     

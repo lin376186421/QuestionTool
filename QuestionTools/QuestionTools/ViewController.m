@@ -37,6 +37,8 @@
     rect.origin.y = windowFrame.origin.y + windowFrame.size.height/2 - rect.size.height/2;
     [windowVC.window setFrame:rect display:YES];
     [[NSApplication sharedApplication].keyWindow addChildWindow:windowVC.window ordered:NSWindowAbove];
+//    [[NSApplication sharedApplication].keyWindow addChildWindow:windowVC.window ordered:NSWindowAbove];
+//    [NSApp runModalForWindow:windowVC.window];
 }
 
 - (IBAction)compareQuestion:(id)sender {

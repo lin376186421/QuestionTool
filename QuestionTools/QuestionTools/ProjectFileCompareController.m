@@ -55,6 +55,13 @@
     }
 }
 
+- (void)windowWillClose:(NSNotification *)notification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//    [App_Delegate setQuestionsEncryptionWindowController:nil];
+    [NSApp stopModalWithCode:0];
+}
+
 - (IBAction)clearBtnAction:(id)sender {
     [_pathTextField setStringValue:@""];
 }
