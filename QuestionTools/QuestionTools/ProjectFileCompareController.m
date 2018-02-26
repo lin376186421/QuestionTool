@@ -53,7 +53,9 @@
         [_target1Item addItemsWithTitles:_targetsArray];
         [_target2Item addItemsWithTitles:_targetsArray];
         
-        [_target2Item removeItemWithTitle:[_target1Item titleOfSelectedItem]];
+        if (_targetsArray.count > 1) {
+            [_target2Item selectItemAtIndex:1];
+        }
     }
 }
 
