@@ -9,6 +9,8 @@
 #import "ProjectFileCompareController.h"
 #import "OCProjectParse.h"
 
+#define APP_CONST_ProjectFileCompareController_LAST_PATH    @"app.const.ProjectFileCompareController.last.path"
+
 @interface ProjectFileCompareController () <NSTextFieldDelegate> {
     
     IBOutlet NSTextField *_pathTextField;
@@ -31,7 +33,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:nil];
     
-    NSString *path = [[NSUserDefaults standardUserDefaults] stringForKey:@"app.const.ProjectFileCompareController.last.path"];
+    NSString *path = [[NSUserDefaults standardUserDefaults] stringForKey:APP_CONST_ProjectFileCompareController_LAST_PATH];
     if (path) {
         [_pathTextField setStringValue:path];
     }
@@ -67,15 +69,26 @@
 }
 
 - (IBAction)target1SelectAction:(id)sender {
-    [_target2Item removeAllItems];
-    [_target2Item addItemsWithTitles:_targetsArray];
-    [_target2Item removeItemWithTitle:[_target1Item titleOfSelectedItem]];
+    [self selectedTargetAction:_target1Item otherBtn:_target2Item];
 }
 
 - (IBAction)target2SelectAction:(id)sender {
-    [_target1Item removeAllItems];
-    [_target1Item addItemsWithTitles:_targetsArray];
-    [_target1Item removeItemWithTitle:[_target2Item titleOfSelectedItem]];
+    [self selectedTargetAction:_target2Item otherBtn:_target1Item];
+}
+
+- (void)selectedTargetAction:(NSPopUpButton *)btn1 otherBtn:(NSPopUpButton *)btn2
+{
+    NSString *title1 = [btn1 titleOfSelectedItem];
+    NSString *title2 = [btn2 titleOfSelectedItem];
+    if (title1.length && title2.length) {
+        if ([title1 isEqualToString:title2]) {
+            if ([btn2 indexOfSelectedItem] == 0 && _targetsArray.count > 1) {
+                [btn2 selectItemAtIndex:1];
+            } else {
+                [btn2 selectItemAtIndex:0];
+            }
+        }
+    }
 }
 
 - (IBAction)submitBtnAction:(id)sender {
@@ -84,7 +97,9 @@
     NSString *target2 = [_target2Item titleOfSelectedItem];
     
     if (path) {
-        [[NSUserDefaults standardUserDefaults] setObject:path forKey:@"app.const.ProjectFileCompareController.last.path"];
+        if ([OCProjectParse isValidProjectPath:path]) {
+            [[NSUserDefaults standardUserDefaults] setObject:path forKey:APP_CONST_ProjectFileCompareController_LAST_PATH];
+        }
     }
     
     NSString *string = [OCProjectParse parseProjectWithPath:path targetName:target1 andTargetName:target2];

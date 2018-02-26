@@ -57,6 +57,9 @@
         case 2:
             name = @"PBXResourcesBuildPhase";
             break;
+        case 3:
+            name = @"PBXFrameworksBuildPhase";
+            break;
         default:
             break;
     }
@@ -161,7 +164,7 @@
     if (dict1 && dict2) {
         NSMutableString *mstring = [NSMutableString string];
         [mstring appendString:@"\n"];
-        for (int i=1; i<=2; i++) {
+        for (int i=1; i<=3; i++) {
             NSString *keyName = [self nameWithType:i];
             [mstring appendFormat:@"%@\n", keyName];
             
